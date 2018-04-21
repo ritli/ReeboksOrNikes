@@ -14,7 +14,6 @@ public class DangerTile : MonoBehaviour
 	{
 		if (count == 1)
 		{
-			Debug.Log("Hej");
 			anim.SetBool("onOrOff", !anim.GetBool("onOrOff"));
 		}
 	}

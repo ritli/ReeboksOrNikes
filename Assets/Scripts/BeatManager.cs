@@ -49,11 +49,14 @@ public class BeatManager : MonoBehaviour {
             instance = this;
         }
 
-        //sliderImage = slider.GetComponent<Image>();
+        if (slider)
+        {
+            sliderImage = slider.GetComponent<Image>();
+        }
 
-        //emitter = GetComponent<FMODUnity.StudioEventEmitter>();
-        //emitter.Event = MusicEvent;
-        //emitter.Play();
+        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        emitter.Event = MusicEvent;
+        emitter.Play();
         SetBPM(110);
     }
 
@@ -79,6 +82,9 @@ public class BeatManager : MonoBehaviour {
             }
         }
 
-        //slider.value = currentBeatTime;
-	}
+        if (slider)
+        {
+            slider.value = currentBeatTime;
+        }
+    }
 }
