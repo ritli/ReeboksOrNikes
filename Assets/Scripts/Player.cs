@@ -11,7 +11,9 @@ public class Player : MonoBehaviour {
     public float slowMoveSpeed = 2;
     bool canMove = true;
 
+    SpriteRenderer sprite;
     Rigidbody2D rigidbody;
+    Animator animator;
 
     void OnBeat(int count)
     {
@@ -21,25 +23,36 @@ public class Player : MonoBehaviour {
 	void Start () {
         BeatManager.onBeat += OnBeat;
         rigidbody = GetComponent<Rigidbody2D>();
-    }
-	
-	void Update () {
-        InputUpdate();
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
-//         movePower -= movePowerDecayMult * Time.deltaTime;
-//         movePower = Mathf.Clamp01(movePower);
+        animator.SetFloat("SpeedMultiplier", BeatManager.GetCurrentBPM / 60);
+    }
+
+    void Update () {
+        InputUpdate();
 	}
 
     void InputUpdate()
     {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = (mousePos - (Vector2)transform.position).normalized;
+
         if (Input.GetButtonDown("Fire1") && canMove)
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            Vector2 dir = (mousePos - (Vector2)transform.position).normalized;
             dir = IsOnBeat ? dir * moveSpeed : dir * slowMoveSpeed;
 
             rigidbody.AddForce(dir, ForceMode2D.Impulse);
+            animator.Play("Jump");
+        }
+
+        if (dir.x > 0)
+        {
+            sprite.flipX = true;
+        }
+        else
+        {
+            sprite.flipX = false;
         }
     }
 

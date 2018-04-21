@@ -31,7 +31,16 @@ public class BeatManager : MonoBehaviour {
         }
     }
 
-	void Start () {
+
+    public static float GetCurrentBPM
+    {
+        get
+        {
+            return instance.currentBpm;
+        }
+    }
+
+    void Start () {
         if (FindObjectsOfType<BeatManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -45,7 +54,7 @@ public class BeatManager : MonoBehaviour {
         emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.Event = MusicEvent;
         emitter.Play();
-        SetBPM(109);
+        SetBPM(110);
     }
 
     void SetBPM(float bpm)
