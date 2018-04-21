@@ -16,7 +16,9 @@ public class Player : MonoBehaviour
     Rigidbody2D rigidbody;
     Animator animator;
 
-    void OnBeat(int count)
+	[HideInInspector] public int bones;
+
+	void OnBeat(int count)
     {
         //  movePower = 1;
     }
