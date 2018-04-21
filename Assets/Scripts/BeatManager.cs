@@ -18,7 +18,28 @@ public class BeatManager : MonoBehaviour {
     public Slider slider;
     public Image sliderImage;
 
+    public delegate void OnBeat(int count);
+    public static event OnBeat onBeat;
+
+    public static BeatManager instance; 
+
+    public static float GetCurrentBeatTime
+    {
+        get
+        {
+            return instance.currentBeatTime;
+        }
+    }
+
 	void Start () {
+        if (FindObjectsOfType<BeatManager>().Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        {
+            instance = this;
+        }
+
         sliderImage = slider.GetComponent<Image>();
 
         emitter = GetComponent<FMODUnity.StudioEventEmitter>();
@@ -35,14 +56,20 @@ public class BeatManager : MonoBehaviour {
 
 	void Update () {
         currentBeatTime += Time.deltaTime / beatTime;
-        currentBeatTime = currentBeatTime % 1;
+
+        if (currentBeatTime > 1)
+        {
+            currentBeatTime -= 1;
+            currentBeat++;
+
+            currentBeat = currentBeat % 4;
+
+            if (onBeat != null)
+            {
+                onBeat(currentBeat);
+            }
+        }
 
         slider.value = currentBeatTime;
-
 	}
-
-    IEnumerator OnBeat()
-    {
-
-    }
 }
