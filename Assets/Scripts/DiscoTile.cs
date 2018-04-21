@@ -6,23 +6,33 @@ public class DiscoTile : MonoBehaviour
 {
 	public bool startMode;
 	public Collider col;
-
-	private bool onOrOff;
 	
+	private Animator anim;
+	private bool animBool;
+	private GameObject player;
+
+	void OnBeat(int count)
+	{
+		if (count == 3)
+		{
+			animBool = !animBool;
+		}
+	}
+
 	void Start ()
 	{
-		onOrOff = startMode;
+		BeatManager.onBeat += OnBeat;
+		anim = GetComponent<Animator>();
+		animBool = anim.GetBool("onOrOff");
+		animBool = startMode;
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update ()
 	{
-		if (onOrOff)
+		if (animBool)
 		{
 			Online();
-		}
-		else
-		{
-			Offline();
 		}
 	}
 
@@ -32,15 +42,10 @@ public class DiscoTile : MonoBehaviour
 
 		for (int i = 0; i < cols.Length; i++)
 		{
-			if (cols[i] == /*player*/ col)
+			if (cols[i] == player.GetComponent<Collider>())
 			{
 				Debug.Log("Alarm went off!");
 			}
 		}
-	}
-
-	void Offline()
-	{
-
 	}
 }
