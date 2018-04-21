@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiscoTile : MonoBehaviour
+public class DangerTile : MonoBehaviour
 {
 	public bool startMode;
 	public Collider col;
 	
 	private Animator anim;
-	private bool animBool;
 	private GameObject player;
 
 	void OnBeat(int count)
 	{
-		if (count == 3)
+		if (count == 1)
 		{
-			animBool = !animBool;
+			Debug.Log("Hej");
+			anim.SetBool("onOrOff", !anim.GetBool("onOrOff"));
 		}
 	}
 
@@ -23,14 +23,13 @@ public class DiscoTile : MonoBehaviour
 	{
 		BeatManager.onBeat += OnBeat;
 		anim = GetComponent<Animator>();
-		animBool = anim.GetBool("onOrOff");
-		animBool = startMode;
+		anim.SetBool("onOrOff", startMode);
 		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update ()
 	{
-		if (animBool)
+		if (anim.GetBool("onOrOff"))
 		{
 			Online();
 		}
