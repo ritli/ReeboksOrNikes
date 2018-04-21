@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     float movePower = 0;
     float movePowerDecayMult = 1;
@@ -17,10 +18,11 @@ public class Player : MonoBehaviour {
 
     void OnBeat(int count)
     {
-      //  movePower = 1;
-    } 
+        //  movePower = 1;
+    }
 
-	void Start () {
+    void Start()
+    {
         BeatManager.onBeat += OnBeat;
         rigidbody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -29,9 +31,10 @@ public class Player : MonoBehaviour {
         animator.SetFloat("SpeedMultiplier", BeatManager.GetCurrentBPM / 60);
     }
 
-    void Update () {
+    void Update()
+    {
         InputUpdate();
-	}
+    }
 
     void InputUpdate()
     {
@@ -40,8 +43,18 @@ public class Player : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1") && canMove)
         {
-            dir = IsOnBeat ? dir * moveSpeed : dir * slowMoveSpeed;
+            canMove = false;
 
+            if (IsOnBeat)
+            {
+                dir = dir * moveSpeed;
+            }
+            else
+            {
+                dir = dir * slowMoveSpeed;
+            }
+
+            Invoke("ResetCanJump", 30 / BeatManager.GetCurrentBPM);
             rigidbody.AddForce(dir, ForceMode2D.Impulse);
             animator.Play("Jump");
         }
@@ -54,6 +67,11 @@ public class Player : MonoBehaviour {
         {
             sprite.flipX = false;
         }
+    }
+
+    void ResetCanJump()
+    {
+        canMove = true;
     }
 
     bool IsOnBeat
