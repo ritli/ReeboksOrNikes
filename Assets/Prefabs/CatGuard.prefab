@@ -245,7 +245,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  killRadius: 0.4
+  killRadius: 0.7
   patrolpoints: {fileID: 0}
   distanceToSwitchPatrolPoint: 1
   meshResolution: 1
