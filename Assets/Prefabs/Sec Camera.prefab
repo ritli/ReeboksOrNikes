@@ -37,8 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4159905706917116}
-  - component: {fileID: 212402896176678462}
-  - component: {fileID: 60726247384969456}
+  - component: {fileID: 212711601220238120}
   m_Layer: 0
   m_Name: ConeOfVision
   m_TagString: Untagged
@@ -53,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063197313400490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5967046, y: 1.1839244, z: 0}
+  m_LocalPosition: {x: -17.058615, y: 1.0209271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4159905706917116}
@@ -67,39 +66,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491210824199272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.022, y: -2.12, z: 0}
+  m_LocalPosition: {x: -0.014, y: -2.066, z: 0}
   m_LocalScale: {x: 2.5420313, y: 4.1604114, z: 1}
   m_Children: []
   m_Father: {fileID: 4123565778230220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60726247384969456
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491210824199272}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
 --- !u!95 &95603513364499032
 Animator:
   serializedVersion: 3
@@ -177,7 +149,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!212 &212402896176678462
+--- !u!212 &212711601220238120
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -212,7 +184,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e1b53fda74b8d964394772b9bc0335f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.128, a: 0.178}
+  m_Color: {r: 1, g: 0.066176474, b: 0.066176474, a: 0.178}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
