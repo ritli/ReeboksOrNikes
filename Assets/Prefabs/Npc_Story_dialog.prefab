@@ -102,7 +102,7 @@ MonoBehaviour:
     sentences:
     - "Oh! This place is packed, well that not a reason for me to puss out!\t"
     - "I have a bone to pick with Cate, so i hope she is ready for someone thats more...\t"
-    - Bit than bark!
+    - Bite than bark!
 --- !u!212 &212741619297657514
 SpriteRenderer:
   m_ObjectHideFlags: 1

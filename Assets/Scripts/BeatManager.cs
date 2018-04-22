@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BeatManager : MonoBehaviour {
+public class BeatManager : MonoBehaviour
+{
 
     GameObject spawnPoint;
 
@@ -24,10 +25,11 @@ public class BeatManager : MonoBehaviour {
     public delegate void OnBeat(int count);
     public static event OnBeat onBeat;
 
-    public static BeatManager instance; 
+    public static BeatManager instance;
 
-    public static Player GetPlayer{
-    get
+    public static Player GetPlayer
+    {
+        get
         {
             return instance.player;
         }
@@ -55,7 +57,8 @@ public class BeatManager : MonoBehaviour {
         GetPlayer.transform.position = instance.spawnPoint.transform.position;
     }
 
-    void Start () {
+    void Start()
+    {
         if (FindObjectsOfType<BeatManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -69,7 +72,8 @@ public class BeatManager : MonoBehaviour {
             sliderImage = slider.GetComponent<Image>();
         }
 
-        if (FindObjectOfType<Player>()) {
+        if (FindObjectOfType<Player>())
+        {
             player = FindObjectOfType<Player>();
         }
 
@@ -94,7 +98,8 @@ public class BeatManager : MonoBehaviour {
         currentBpm = bpm;
     }
 
-	void Update () {
+    void Update()
+    {
         currentBeatTime += Time.deltaTime / beatTime;
 
         if (currentBeatTime > 1)
@@ -120,8 +125,8 @@ public class BeatManager : MonoBehaviour {
     {
         if (transform.childCount != 0)
         {
-            spawnPoint = transform.GetChild(0).gameObject; 
-        }  
+            spawnPoint = transform.GetChild(0).gameObject;
+        }
     }
 #endif
 }
