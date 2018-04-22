@@ -5,7 +5,6 @@ using UnityEngine;
 public class DoorLock : MonoBehaviour
 {
 	public int winsToClear;
-	public float speed;
 	public Transform winEffect;
 
 	[HideInInspector] public bool active;
@@ -16,7 +15,6 @@ public class DoorLock : MonoBehaviour
 	void Start()
 	{
 		BeatManager.onBeat += OnBeat;
-		//speed *= BeatManager.GetCurrentBPM / 60;
 	}
 
 	void OnBeat(int count)
