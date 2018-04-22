@@ -17,11 +17,19 @@ public class BeatManager : MonoBehaviour {
 
     public Slider slider;
     public Image sliderImage;
+    public Player player;
 
     public delegate void OnBeat(int count);
     public static event OnBeat onBeat;
 
     public static BeatManager instance; 
+
+    public static Player GetPlayer{
+    get
+        {
+            return instance.player;
+        }
+    }
 
     public static float GetCurrentBeatTime
     {
@@ -54,9 +62,13 @@ public class BeatManager : MonoBehaviour {
             sliderImage = slider.GetComponent<Image>();
         }
 
-        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
-        emitter.Event = MusicEvent;
-        emitter.Play();
+        if (FindObjectOfType<Player>()) {
+            player = FindObjectOfType<Player>();
+        }
+
+        //emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        //emitter.Event = MusicEvent;
+        //emitter.Play();
         SetBPM(110);
     }
 

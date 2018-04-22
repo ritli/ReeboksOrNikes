@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     Animator animator;
 
 	[HideInInspector] public int bones;
+	public GameObject UIBone;
 
 	void OnBeat(int count)
     {
@@ -36,6 +38,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         InputUpdate();
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			PickedUpBone();
+		}
     }
 
     void InputUpdate()
@@ -85,4 +91,12 @@ public class Player : MonoBehaviour
             return (time > 0.7f || time < 0.3f);
         }
     }
+
+	public void PickedUpBone()
+	{
+		GameObject newBone;
+		bones++;
+		newBone = Instantiate(UIBone, UIBone.transform.parent);
+		newBone.transform.position += new Vector3(100*bones, 0, 0);
+	}
 }

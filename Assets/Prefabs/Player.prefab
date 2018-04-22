@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000493950443080}
   - component: {fileID: 114722723475196884}
   - component: {fileID: 114059954678698798}
+  - component: {fileID: 114153431524538784}
   - component: {fileID: 50220013522952016}
   - component: {fileID: 212426690911667574}
   - component: {fileID: 95613227589075780}
@@ -94,6 +95,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 100
   slowMoveSpeed: 2
+  bones: 0
+  UIBone: {fileID: 0}
+--- !u!114 &114153431524538784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428136513988498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f27267be44f304cb17ae82764a7348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawn: {fileID: 0}
+  fadeScreen: {fileID: 0}
 --- !u!114 &114722723475196884
 MonoBehaviour:
   m_ObjectHideFlags: 1

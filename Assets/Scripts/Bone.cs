@@ -8,7 +8,7 @@ public class Bone : MonoBehaviour
 	{
 		if (collision.CompareTag("Player"))
 		{
-			collision.GetComponent<Player>().bones++;
+			collision.GetComponent<Player>().PickedUpBone();
 			Destroy(gameObject);
 		}
 	}
