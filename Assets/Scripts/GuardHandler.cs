@@ -14,7 +14,7 @@ public class GuardHandler : MonoBehaviour {
     [Header("Vision Options")]
 
     public LayerMask obstacleMask;
-    public float visionAngle, visionRange, timeToDetect, stayOnTargetTime;
+    public float visionAngle, visionRange, alertVisionRange, idleVisionRange, timeToDetect, stayOnTargetTime;
     float timeInVisionCone, currentStayOnTargetTime;
     public ContactFilter2D filter2D;
     public float killRadius;
@@ -44,7 +44,6 @@ public class GuardHandler : MonoBehaviour {
 
     private void OnDrawGizmosSelected()
     {
-
         Gizmos.color = Color.red;
 
         Vector2 v = Quaternion.Euler(0, 0, -visionAngle) * forwardVector * visionRange;
@@ -57,6 +56,8 @@ public class GuardHandler : MonoBehaviour {
     }
 #endif
     void Start() {
+        visionRange = idleVisionRange;
+
         alertMark = transform.Find("Alert").GetComponent<SpriteRenderer>();
         alertmarkOffset = alertMark.transform.localPosition.x;
 
@@ -140,8 +141,22 @@ public class GuardHandler : MonoBehaviour {
         PatrolUpdate();
         VisionUpdate();
 
-        forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime);
-            
+
+        if (playerDetected)
+        {
+            visionRange = Mathf.Lerp(visionRange, alertVisionRange, Time.deltaTime * 2);
+            forwardVector = Vector2.Lerp(forwardVector, (BeatManager.GetPlayer.transform.position - transform.position).normalized, Time.deltaTime * 3).normalized;
+        }
+        else
+        {
+            visionRange = Mathf.Lerp(visionRange, idleVisionRange, Time.deltaTime * 2);
+            forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 3).normalized;
+        }
+
+        Debug.DrawLine(transform.position, transform.position + (Vector3)forwardVector);
+        Debug.DrawLine(transform.position, transform.position + (Vector3)path.velocity2D, Color.red);
+
+
         if (path.velocity2D.x > 0)
         {
 
@@ -274,7 +289,7 @@ public class GuardHandler : MonoBehaviour {
         RaycastHit2D[] hit = new RaycastHit2D[10];
 
 
-        Debug.DrawRay(transform.position, dir * visionRange);
+      //  Debug.DrawRay(transform.position, dir * visionRange);
 
         if (Physics2D.Raycast(transform.position, dir * visionRange, filter2D, hit, visionRange) > 0)
         {

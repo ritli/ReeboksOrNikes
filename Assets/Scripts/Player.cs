@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
                     dir = dir * slowMoveSpeed;
                 }
 
-                Invoke("ResetCanJump", 30 / BeatManager.GetCurrentBPM);
+                Invoke("ResetCanJump", 45 / BeatManager.GetCurrentBPM);
                 rigidbody.AddForce(dir, ForceMode2D.Impulse);
                 animator.Play("Jump");
             }
