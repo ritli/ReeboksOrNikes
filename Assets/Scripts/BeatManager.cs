@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BeatManager : MonoBehaviour {
+public class BeatManager : MonoBehaviour
+{
+
+    GameObject spawnPoint;
 
     [FMODUnity.EventRef]
     public string MusicEvent;
 
     FMODUnity.StudioEventEmitter emitter;
 
-    float currentBpm;
+    float currentBpm = 110;
     float beatTime;
     float currentBeatTime;
     int currentBeat = 0;
@@ -22,10 +25,11 @@ public class BeatManager : MonoBehaviour {
     public delegate void OnBeat(int count);
     public static event OnBeat onBeat;
 
-    public static BeatManager instance; 
+    public static BeatManager instance;
 
-    public static Player GetPlayer{
-    get
+    public static Player GetPlayer
+    {
+        get
         {
             return instance.player;
         }
@@ -48,7 +52,13 @@ public class BeatManager : MonoBehaviour {
         }
     }
 
-    void Start () {
+    public static void RestartPlayer()
+    {
+        GetPlayer.transform.position = instance.spawnPoint.transform.position;
+    }
+
+    void Start()
+    {
         if (FindObjectsOfType<BeatManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -62,14 +72,24 @@ public class BeatManager : MonoBehaviour {
             sliderImage = slider.GetComponent<Image>();
         }
 
-        if (FindObjectOfType<Player>()) {
+        if (FindObjectOfType<Player>())
+        {
             player = FindObjectOfType<Player>();
         }
 
         emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.Event = MusicEvent;
         emitter.Play();
+
+        emitter.SetParameter("LoopStage", 1);
+
+        //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(110);
+    }
+
+    public static void SetChased(float value)
+    {
+        instance.emitter.SetParameter("Chased", value);
     }
 
     void SetBPM(float bpm)
@@ -78,7 +98,8 @@ public class BeatManager : MonoBehaviour {
         currentBpm = bpm;
     }
 
-	void Update () {
+    void Update()
+    {
         currentBeatTime += Time.deltaTime / beatTime;
 
         if (currentBeatTime > 1)
@@ -99,4 +120,13 @@ public class BeatManager : MonoBehaviour {
             slider.value = currentBeatTime;
         }
     }
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (transform.childCount != 0)
+        {
+            spawnPoint = transform.GetChild(0).gameObject;
+        }
+    }
+#endif
 }
