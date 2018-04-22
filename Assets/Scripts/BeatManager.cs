@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BeatManager : MonoBehaviour {
 
+    GameObject spawnPoint;
+
     [FMODUnity.EventRef]
     public string MusicEvent;
 
@@ -46,6 +48,11 @@ public class BeatManager : MonoBehaviour {
         {
             return instance.currentBpm;
         }
+    }
+
+    public static void RestartPlayer()
+    {
+        GetPlayer.transform.position = instance.spawnPoint.transform.position;
     }
 
     void Start () {
@@ -108,4 +115,13 @@ public class BeatManager : MonoBehaviour {
             slider.value = currentBeatTime;
         }
     }
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (transform.childCount != 0)
+        {
+            spawnPoint = transform.GetChild(0).gameObject; 
+        }  
+    }
+#endif
 }

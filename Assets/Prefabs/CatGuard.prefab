@@ -177,9 +177,10 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
-  visionAngle: 40
-  visionRange: 4
-  timeToDetect: 0.5
+  visionAngle: 50
+  visionRange: 5
+  timeToDetect: 0.1
+  stayOnTargetTime: 0.5
   filter2D:
     useTriggers: 0
     useLayerMask: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  killRadius: 0.4
   patrolpoints: {fileID: 0}
   distanceToSwitchPatrolPoint: 1
   meshResolution: 1
@@ -224,10 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  repathRate: 0.5
+  repathRate: 1
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 1.6
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2

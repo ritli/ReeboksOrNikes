@@ -5,65 +5,92 @@ using UnityEngine.UI;
 
 public class FailState : MonoBehaviour
 {
-	public Transform respawn;
-	public GameObject fadeScreen;
+    public Texture fadeTexture;
 
 	private int losses;
 	private float lerpValue;
-	private bool hitable;
+	private bool hittable = true;
 	private bool fadeOut;
 	private bool fadeIn;
 	private Color fadeColor;
 	private Color newColor;
 
-	private void Start()
+    float toAlpha = 0;
+    float currentToAlpha = 0;
+
+    float fadeSpeed = 15;
+
+    private void OnGUI()
+    {
+        GUI.color = newColor;
+        GUI.DrawTexture(new Rect(0,0, Screen.width, Screen.height), fadeTexture);
+    }
+
+    private void Start()
 	{
 		BeatManager.onBeat += OnBeat;
-		fadeColor = fadeScreen.GetComponent<Image>().color;
 		newColor = fadeColor;
 	}
 
 	void OnBeat(int count)
 	{
-		if (fadeOut && (count == 0 || count == 2))
+		if (fadeOut)
 		{
-			newColor.a += 0.25f;
-			fadeScreen.GetComponent<Image>().color = newColor;
-			if (newColor.a > 1)
+            toAlpha += 1.1f;
+			if (toAlpha > 1)
 			{
-				newColor.a = 1f;
 				fadeOut = false;
 				fadeIn = true;
+
+                BeatManager.RestartPlayer();
 			}
 		}
 
-		if (fadeIn && (count == 0 || count == 2))
+		else if (fadeIn)
 		{
-			newColor.a -= 0.25f;
-			fadeScreen.GetComponent<Image>().color = newColor;
-			if (newColor.a < 0)
+            BeatManager.GetPlayer.movementDisabled = false;
+
+            toAlpha -= 0.5f;
+			if (toAlpha < 0)
 			{
-				newColor.a = 0f;
+                toAlpha = 0f;
 				fadeIn = false;
-			}
+                hittable = true;
+            }
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.CompareTag("Enemy") && hitable)
+		if (collision.gameObject.CompareTag("Enemy") && hittable)
 		{
-			fadeOut = true;
-			hitable = false;
+
 		}
 	}
 
+    public void RespawnPlayer()
+    {
+        if (hittable)
+        {
+            print("Respawning player");
+            fadeOut = true;
+            hittable = false;
+
+            BeatManager.GetPlayer.movementDisabled = true;
+        }
+    }
+
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Y))
+        currentToAlpha = Mathf.Lerp(currentToAlpha, toAlpha, Time.deltaTime * fadeSpeed);
+        newColor.a = currentToAlpha;
+
+        if (Input.GetKeyDown(KeyCode.Y))
 		{
 			fadeOut = true;
-			print("Testing respawn");
-		}
+            hittable = false;
+
+            BeatManager.GetPlayer.movementDisabled = true;
+        }
 	}
 }

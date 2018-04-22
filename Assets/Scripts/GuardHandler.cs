@@ -14,9 +14,10 @@ public class GuardHandler : MonoBehaviour {
     [Header("Vision Options")]
 
     public LayerMask obstacleMask;
-    public float visionAngle, visionRange, timeToDetect;
-    float timeInVisionCone;
+    public float visionAngle, visionRange, timeToDetect, stayOnTargetTime;
+    float timeInVisionCone, currentStayOnTargetTime;
     public ContactFilter2D filter2D;
+    public float killRadius;
 
     [Header("Patrol Options")]
 
@@ -34,6 +35,11 @@ public class GuardHandler : MonoBehaviour {
 
     bool playerVisible, playerDetected, playerTargetSet;
 
+    MeshRenderer coneMeshRenderer;
+
+    SpriteRenderer alertMark;
+    float alertmarkOffset;
+
 #if UNITY_EDITOR
 
     private void OnDrawGizmosSelected()
@@ -46,10 +52,16 @@ public class GuardHandler : MonoBehaviour {
         v = Quaternion.Euler(0, 0, visionAngle) * forwardVector * visionRange;
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)v);
 
+
+        Gizmos.DrawWireSphere(transform.position, killRadius);
     }
 #endif
     void Start() {
+        alertMark = transform.Find("Alert").GetComponent<SpriteRenderer>();
+        alertmarkOffset = alertMark.transform.localPosition.x;
+
         viewMeshFilter = GetComponentInChildren<MeshFilter>();
+        coneMeshRenderer = GetComponentInChildren<MeshRenderer>();
 
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
@@ -67,26 +79,51 @@ public class GuardHandler : MonoBehaviour {
 
     void PatrolUpdate()
     {
+
+        if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < killRadius)
+        {
+            BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
+        }
+
         if (playerDetected)
         {
+
             if (!playerTargetSet)
             {
+                currentStayOnTargetTime = 0;
                 BeatManager.GetPlayer.AddChaser();
                 playerTargetSet = true;
                 path.GetComponent<Pathfinding.AIDestinationSetter>().target = BeatManager.GetPlayer.transform;
-                
+                alertMark.enabled = true;
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/AngryCat");
+            }
+
+            
+            currentStayOnTargetTime = Mathf.Clamp(currentStayOnTargetTime, 0, int.MaxValue) - Time.deltaTime;
+        }
+        else
+        {
+            //coneMeshRenderer.material.SetColor("Emission", alertColor);
+
+
+            currentStayOnTargetTime = Mathf.Clamp(currentStayOnTargetTime, 0, int.MaxValue) + Time.deltaTime;
+
+            if (playerTargetSet && currentStayOnTargetTime > stayOnTargetTime)
+            {
+                currentStayOnTargetTime = 0;
+
+                BeatManager.GetPlayer.RemoveChaser();
+                playerTargetSet = false;
+                path.GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[currentPatrolPoint].transform;
+
+                alertMark.enabled = false;
             }
         }
-        else if (playerTargetSet)
-        {
-            BeatManager.GetPlayer.RemoveChaser();
-            playerTargetSet = false;
-            path.GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[currentPatrolPoint].transform;
 
-        }
-
-        if (Vector2.Distance(transform.position, patrolpoints.PatrolPoints[currentPatrolPoint].transform.position) < distanceToSwitchPatrolPoint)
+        if (!playerDetected && Vector2.Distance(transform.position, patrolpoints.PatrolPoints[currentPatrolPoint].transform.position) < distanceToSwitchPatrolPoint)
         {
+            //coneMeshRenderer.material.SetColor("Emission", idleColor);
 
             currentPatrolPoint = currentPatrolPoint + 1;
 
@@ -103,15 +140,19 @@ public class GuardHandler : MonoBehaviour {
         PatrolUpdate();
         VisionUpdate();
 
-        forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 2);
+        forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime);
             
         if (path.velocity2D.x > 0)
         {
+
+            alertMark.flipX = true;
             sprite.flipX = true;
             //forwardVector = Vector2.right;
         }
         else
         {
+            alertMark.flipX = false;
+
             sprite.flipX = false;
             //forwardVector = Vector2.left;
         }
@@ -126,6 +167,8 @@ public class GuardHandler : MonoBehaviour {
     {
         if (playerVisible)
         {
+
+
             timeInVisionCone += Time.deltaTime;
 
             if (timeInVisionCone > timeToDetect)
@@ -231,7 +274,7 @@ public class GuardHandler : MonoBehaviour {
         RaycastHit2D[] hit = new RaycastHit2D[10];
 
 
-        //Debug.DrawRay(transform.position, dir * visionRange);
+        Debug.DrawRay(transform.position, dir * visionRange);
 
         if (Physics2D.Raycast(transform.position, dir * visionRange, filter2D, hit, visionRange) > 0)
         {
