@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 114151597055350850}
   MasterBankRef: {fileID: 114350333303553278}
   StringsBankRef: {fileID: 114780949412611228}
-  stringsBankWriteTime: 636600357662711135
+  stringsBankWriteTime: 636600373854091502
   cacheVersion: 2
 --- !u!114 &114003427299067388
 MonoBehaviour:
@@ -438,6 +438,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114346005958407176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114350333303553278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Workspace\GameJam\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
     Bank.bank
-  lastModified: 636600357662701136
+  lastModified: 636600373854071476
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -542,6 +557,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114534370408483226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114558706357907210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636600357662711135
+  lastModified: 636600373854091502
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -811,8 +841,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114227416603096032}
-  - {fileID: 114273206329307824}
+  - {fileID: 114534370408483226}
+  - {fileID: 114346005958407176}
   MinDistance: 0
   MaxDistance: 0
   Length: 43647
