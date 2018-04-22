@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class DoorLock : MonoBehaviour
 {
-	public int winsToClear;
 	public Transform winEffect;
 
 	[HideInInspector] public bool active;
 
 	private int wins;
-	private bool starter;
 
 	void Start()
 	{
@@ -19,28 +17,20 @@ public class DoorLock : MonoBehaviour
 
 	void OnBeat(int count)
 	{
-		if (!starter)
-		{
-			active = true;
-			starter = true;
-		}
-
-		if (Input.GetButtonDown("Jump") && IsOnBeat && (transform.eulerAngles.z < 20f || transform.eulerAngles.z > 340f))
+		if (Input.GetButtonDown("Jump") && IsOnBeat && (transform.eulerAngles.z < 25f || transform.eulerAngles.z > 335f))
 		{
 			if (transform.eulerAngles.z < 3 || transform.eulerAngles.z > 358)
 			{
 				wins += 2;
 				Win();
-				print("SUPER WIN!");
 			}
 			else
 			{
 				wins++;
 				Win();
-				print("WIN!");
 			}
 
-			if (wins >= winsToClear)
+			if (wins >= 3)
 			{
 				Open();
 			}
@@ -69,7 +59,8 @@ public class DoorLock : MonoBehaviour
 
 	void Open()
 	{
-
+		//Fade
+		active = false;
 	}
 
 	bool IsOnBeat
@@ -78,7 +69,7 @@ public class DoorLock : MonoBehaviour
 		{
 			float time = BeatManager.GetCurrentBeatTime;
 
-			return (time > 0.7f || time < 0.3f);
+			return (time > 0.6f || time < 0.4f);
 		}
 	}
 }

@@ -57,13 +57,4 @@ public class FailState : MonoBehaviour
 			hitable = false;
 		}
 	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Y))
-		{
-			fadeOut = true;
-			print("Testing respawn");
-		}
-	}
 }
