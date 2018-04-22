@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DoorLockObject : MonoBehaviour
 {
+	public int bonesToAdvance;
+
 	private DoorLock gameplayUI;
 	private bool playerIsClose;
 
@@ -18,13 +20,17 @@ public class DoorLockObject : MonoBehaviour
 		if (Input.GetButton("Jump") && playerIsClose)
 		{
 			gameplayUI.active = true;
+			if (gameplayUI.wins >= 3)
+			{
+				gameplayUI.active = false;
+				MakeVisible(false);
+			}
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		print("Iz cloze yes");
-		if (collision.CompareTag("Player"))
+		if (collision.CompareTag("Player") && BeatManager.GetPlayer.bones >= bonesToAdvance)
 		{
 			playerIsClose = true;
 			MakeVisible(true);

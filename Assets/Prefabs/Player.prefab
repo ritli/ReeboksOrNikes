@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 50220013522952016}
   - component: {fileID: 212426690911667574}
   - component: {fileID: 95613227589075780}
+  - component: {fileID: 70220699326622470}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428136513988498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.5, y: -5.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,6 +66,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &70220699326622470
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428136513988498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01317215, y: -0.03732109}
+  m_Size: {x: 0.4906776, y: 0.9253578}
+  m_Direction: 0
 --- !u!95 &95613227589075780
 Animator:
   serializedVersion: 3
@@ -94,9 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
-  slowMoveSpeed: 2
+  slowMoveSpeed: 20
   bones: 0
   UIBone: {fileID: 0}
+  chaserCount: 0
 --- !u!114 &114153431524538784
 MonoBehaviour:
   m_ObjectHideFlags: 1

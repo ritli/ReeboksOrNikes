@@ -7,8 +7,7 @@ public class DoorLock : MonoBehaviour
 	public Transform winEffect;
 
 	[HideInInspector] public bool active;
-
-	private int wins;
+	[HideInInspector] public int wins;
 
 	void Start()
 	{
@@ -17,24 +16,6 @@ public class DoorLock : MonoBehaviour
 
 	void OnBeat(int count)
 	{
-		if (Input.GetButtonDown("Jump") && IsOnBeat && (transform.eulerAngles.z < 25f || transform.eulerAngles.z > 335f))
-		{
-			if (transform.eulerAngles.z < 3 || transform.eulerAngles.z > 358)
-			{
-				wins += 2;
-				Win();
-			}
-			else
-			{
-				wins++;
-				Win();
-			}
-
-			if (wins >= 3)
-			{
-				Open();
-			}
-		}
 	}
 
 	private void Update()
@@ -42,6 +23,25 @@ public class DoorLock : MonoBehaviour
 		if (active)
 		{
 			Spin();
+
+			if (Input.GetButtonDown("Jump") && IsOnBeat && (transform.eulerAngles.z < 30f || transform.eulerAngles.z > 330f))
+			{
+				if (transform.eulerAngles.z < 5 || transform.eulerAngles.z > 355)
+				{
+					wins += 2;
+					Win();
+				}
+				else
+				{
+					wins++;
+					Win();
+				}
+			}
+		}
+		
+		if (wins >= 3)
+		{
+			Open();
 		}
 	}
 
@@ -69,7 +69,7 @@ public class DoorLock : MonoBehaviour
 		{
 			float time = BeatManager.GetCurrentBeatTime;
 
-			return (time > 0.6f || time < 0.4f);
+			return (time > 0.7f || time < 0.3f);
 		}
 	}
 }

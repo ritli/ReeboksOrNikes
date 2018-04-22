@@ -129,9 +129,17 @@ public class Player : MonoBehaviour
 
 	public void PickedUpBone()
 	{
-		GameObject newBone;
-		bones++;
-		newBone = Instantiate(UIBone, UIBone.transform.parent);
-		newBone.transform.position += new Vector3(100*bones, 0, 0);
+		if (bones == 0)
+		{
+			bones++;
+			UIBone.SetActive(true);
+		}
+		else
+		{
+			GameObject newBone;
+			bones++;
+			newBone = Instantiate(UIBone, UIBone.transform.parent);
+			newBone.transform.position += new Vector3(100 * bones, 0, 0);
+		}
 	}
 }
