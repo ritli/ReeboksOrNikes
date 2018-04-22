@@ -73,6 +73,10 @@ public class Player : MonoBehaviour
         }
 
         InputUpdate();
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			PickedUpBone();
+		}
     }
 
     void InputUpdate()
@@ -125,7 +129,9 @@ public class Player : MonoBehaviour
 
 	public void PickedUpBone()
 	{
+		GameObject newBone;
 		bones++;
-		Instantiate(UIBone, UIBone.transform.position + new Vector3(100 * bones, 0, 0), Quaternion.identity);
+		newBone = Instantiate(UIBone, UIBone.transform.parent);
+		newBone.transform.position += new Vector3(100*bones, 0, 0);
 	}
 }
