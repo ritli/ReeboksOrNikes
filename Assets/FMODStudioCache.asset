@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114136923768405686}
-  - {fileID: 114785004953296920}
+  - {fileID: 114526004236370368}
   EditorEvents:
   - {fileID: 114143995808419164}
-  MasterBankRef: {fileID: 114785004953296920}
+  MasterBankRef: {fileID: 114526004236370368}
   StringsBankRef: {fileID: 114136923768405686}
-  stringsBankWriteTime: 636599235543574712
+  stringsBankWriteTime: 636599328888529275
   cacheVersion: 2
 --- !u!114 &114136923768405686
 MonoBehaviour:
@@ -32,7 +32,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636599235543574712
+  lastModified: 636599328888529275
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -52,12 +52,12 @@ MonoBehaviour:
   Path: event:/Loop
   guid: 915c0c82984e9e4996d73d1bbca4b684
   Banks:
-  - {fileID: 114785004953296920}
+  - {fileID: 114526004236370368}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114444683748739650}
+  - {fileID: 114599181567600030}
   MinDistance: 0
   MaxDistance: 0
   Length: 34909
@@ -77,6 +77,40 @@ MonoBehaviour:
   Max: 100
   Default: 0
 --- !u!114 &114444683748739650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114526004236370368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: F:\GitHub\Ludum Dare 41\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636599405747953817
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 455904
+  Exists: 1
+--- !u!114 &114599181567600030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

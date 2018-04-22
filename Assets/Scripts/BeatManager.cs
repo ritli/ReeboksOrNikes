@@ -66,9 +66,9 @@ public class BeatManager : MonoBehaviour {
             player = FindObjectOfType<Player>();
         }
 
-        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
-        emitter.Event = MusicEvent;
-        emitter.Play();
+        //emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        //emitter.Event = MusicEvent;
+        //emitter.Play();
         SetBPM(110);
     }
 
