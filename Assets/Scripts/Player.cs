@@ -20,6 +20,25 @@ public class Player : MonoBehaviour
 	[HideInInspector] public int bones;
 	public GameObject UIBone;
 
+    public int chaserCount = 0;
+    bool chaserCountUpdated = false;
+
+    public void AddChaser()
+    {
+
+        chaserCountUpdated = true;
+        chaserCount++;
+    }
+
+    public void RemoveChaser()
+    {
+        chaserCountUpdated = true;
+
+        chaserCount--;
+
+        chaserCount = Mathf.Clamp(chaserCount, 0, int.MaxValue);
+    }
+
 	void OnBeat(int count)
     {
         //  movePower = 1;
@@ -37,6 +56,22 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (chaserCount > 0)
+        {
+            if (chaserCountUpdated)
+            {
+                chaserCountUpdated = false;
+                BeatManager.SetChased(1);
+
+            }
+        }
+        else if (chaserCountUpdated)
+        {
+            chaserCountUpdated = false;
+
+            BeatManager.SetChased(0);
+        }
+
         InputUpdate();
     }
 

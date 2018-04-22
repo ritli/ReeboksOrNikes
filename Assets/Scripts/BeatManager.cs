@@ -10,7 +10,7 @@ public class BeatManager : MonoBehaviour {
 
     FMODUnity.StudioEventEmitter emitter;
 
-    float currentBpm;
+    float currentBpm = 110;
     float beatTime;
     float currentBeatTime;
     int currentBeat = 0;
@@ -66,10 +66,19 @@ public class BeatManager : MonoBehaviour {
             player = FindObjectOfType<Player>();
         }
 
-        //emitter = GetComponent<FMODUnity.StudioEventEmitter>();
-        //emitter.Event = MusicEvent;
-        //emitter.Play();
+        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        emitter.Event = MusicEvent;
+        emitter.Play();
+
+        emitter.SetParameter("LoopStage", 1);
+
+        //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(110);
+    }
+
+    public static void SetChased(float value)
+    {
+        instance.emitter.SetParameter("Chased", value);
     }
 
     void SetBPM(float bpm)

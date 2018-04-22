@@ -9,29 +9,48 @@ public class GuardHandler : MonoBehaviour {
     Animator animator;
 
     Vector2 forwardVector = Vector2.left;
-    public LayerMask obstacleMask;
 
-    public float visionAngle, visionRange;
+
+    [Header("Vision Options")]
+
+    public LayerMask obstacleMask;
+    public float visionAngle, visionRange, timeToDetect;
+    float timeInVisionCone;
     public ContactFilter2D filter2D;
 
-    public MeshFilter viewMeshFilter;
+    [Header("Patrol Options")]
+
+    public PatrolPointHandler patrolpoints;
+    int currentPatrolPoint = 0;
+    public float distanceToSwitchPatrolPoint;
+
+    MeshFilter viewMeshFilter;
     Mesh viewMesh;
+
+    [Header("Cone Visualize Options")]
     public float meshResolution;
     public int edgeResolveIterations;
     public float edgeDstThreshold;
 
+    bool playerVisible, playerDetected, playerTargetSet;
+
+#if UNITY_EDITOR
+
     private void OnDrawGizmosSelected()
     {
+
         Gizmos.color = Color.red;
 
-        Vector2 v = Quaternion.Euler(0, 0, -visionAngle) * Vector2.left * visionRange;
+        Vector2 v = Quaternion.Euler(0, 0, -visionAngle) * forwardVector * visionRange;
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)v);
-        v = Quaternion.Euler(0, 0, visionAngle) * Vector2.left * visionRange;
+        v = Quaternion.Euler(0, 0, visionAngle) * forwardVector * visionRange;
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)v);
 
     }
-
+#endif
     void Start() {
+        viewMeshFilter = GetComponentInChildren<MeshFilter>();
+
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
@@ -42,12 +61,49 @@ public class GuardHandler : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
 
         animator.SetFloat("SpeedMultiplier", BeatManager.GetCurrentBPM / 60);
+
+        GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[0].transform;
+    }
+
+    void PatrolUpdate()
+    {
+        if (playerDetected)
+        {
+            if (!playerTargetSet)
+            {
+                BeatManager.GetPlayer.AddChaser();
+                playerTargetSet = true;
+                path.GetComponent<Pathfinding.AIDestinationSetter>().target = BeatManager.GetPlayer.transform;
+                
+            }
+        }
+        else if (playerTargetSet)
+        {
+            BeatManager.GetPlayer.RemoveChaser();
+            playerTargetSet = false;
+            path.GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[currentPatrolPoint].transform;
+
+        }
+
+        if (Vector2.Distance(transform.position, patrolpoints.PatrolPoints[currentPatrolPoint].transform.position) < distanceToSwitchPatrolPoint)
+        {
+
+            currentPatrolPoint = currentPatrolPoint + 1;
+
+            if (currentPatrolPoint == patrolpoints.PatrolPoints.Count)
+            {
+                currentPatrolPoint = 0;
+            }
+
+            path.GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[currentPatrolPoint].transform;
+        }
     }
 
     void Update() {
+        PatrolUpdate();
         VisionUpdate();
 
-        forwardVector = path.velocity2D;
+        forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 2);
             
         if (path.velocity2D.x > 0)
         {
@@ -68,17 +124,47 @@ public class GuardHandler : MonoBehaviour {
 
     void VisionUpdate()
     {
+        if (playerVisible)
+        {
+            timeInVisionCone += Time.deltaTime;
+
+            if (timeInVisionCone > timeToDetect)
+            {
+                playerDetected = true;    
+            }
+        }
+        else
+        {
+            timeInVisionCone -= Time.deltaTime * 3;
+
+            if (timeInVisionCone <= 0)
+            {
+                playerDetected = false;
+            }
+        }
+
+        timeInVisionCone = Mathf.Clamp(timeInVisionCone, 0, timeToDetect + 1);
+
         Vector2 dir = (BeatManager.GetPlayer.transform.position - transform.position).normalized * visionRange;
 
         //print(Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position));
 
-        if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange)
+        if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange && Mathf.Abs(Vector2.Angle(dir, forwardVector.normalized)) < visionAngle)
         {
-            if (Mathf.Abs(Vector2.Angle(dir, new Vector2(-1, 0).normalized)) < visionAngle)
+            if (!Physics2D.Raycast(transform.position, dir, visionRange, obstacleMask))
             {
-                if (!Physics2D.Raycast(transform.position, dir, visionRange, obstacleMask)) {
-                }
+                playerVisible = true;
+
+                print("Player Detected");
             }
+            else
+            {
+                playerVisible = false;
+            }
+        }
+        else
+        {
+            playerVisible = false;
         }
     }
 
