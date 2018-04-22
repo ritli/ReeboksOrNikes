@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public int chaserCount = 0;
     bool chaserCountUpdated = false;
 
+    public bool movementDisabled = false;
+    bool audioPrimed = false;
+
     public void AddChaser()
     {
         chaserCountUpdated = true;
@@ -92,22 +95,27 @@ public class Player : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 dir = (mousePos - (Vector2)transform.position).normalized;
 
-        if (Input.GetButtonDown("Fire1") && canMove)
+        if (!movementDisabled)
         {
-            canMove = false;
-
-            if (IsOnBeat)
+            if (Input.GetButtonDown("Fire1") && canMove)
             {
-                dir = dir * moveSpeed;
-            }
-            else
-            {
-                dir = dir * slowMoveSpeed;
-            }
+                canMove = false;
 
-            Invoke("ResetCanJump", 30 / BeatManager.GetCurrentBPM);
-            rigidbody.AddForce(dir, ForceMode2D.Impulse);
-            animator.Play("Jump");
+                if (IsOnBeat)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
+                    dir = dir * moveSpeed;
+                }
+                else
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+                    dir = dir * slowMoveSpeed;
+                }
+
+                Invoke("ResetCanJump", 45 / BeatManager.GetCurrentBPM);
+                rigidbody.AddForce(dir, ForceMode2D.Impulse);
+                animator.Play("Jump");
+            }
         }
 
         if (dir.x > 0)
