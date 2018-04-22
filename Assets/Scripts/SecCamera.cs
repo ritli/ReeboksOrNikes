@@ -60,16 +60,12 @@ public class SecCamera : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D collision)
 	{
-		//if (Alarm != true)
-		//{
-			GetComponent<Animator>().SetBool("PlayerInView", true);
-			dangerLevel += Time.deltaTime;
-			if (dangerLevel >= 3)
-			{
-				//Alarm goes off
-
-			}
-		//}
+		GetComponent<Animator>().SetBool("PlayerInView", true);
+		dangerLevel += Time.deltaTime;
+		if (dangerLevel >= 3)
+		{
+			BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D collision)

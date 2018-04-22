@@ -42,7 +42,7 @@ public class DangerTile : MonoBehaviour
 		{
 			if (cols[i] == player.GetComponent<Collider>())
 			{
-				Debug.Log("Alarm went off!");
+				BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
 			}
 		}
 	}
