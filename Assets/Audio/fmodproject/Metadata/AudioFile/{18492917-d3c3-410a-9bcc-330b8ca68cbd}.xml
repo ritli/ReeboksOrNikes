@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{18492917-d3c3-410a-9bcc-330b8ca68cbd}">
+        <property name="assetPath">
+            <value>SFX/JumpFail4.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.23557823129251701</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{28bb8350-b274-4679-9612-85e652790c6c}</destination>
+        </relationship>
+    </object>
+</objects>

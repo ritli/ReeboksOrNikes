@@ -20,6 +20,28 @@ public class Player : MonoBehaviour
 	[HideInInspector] public int bones;
 	public GameObject UIBone;
 
+    public int chaserCount = 0;
+    bool chaserCountUpdated = false;
+    public bool movementDisabled = false;
+    bool audioPrimed = false;
+
+
+    public void AddChaser()
+    {
+
+        chaserCountUpdated = true;
+        chaserCount++;
+    }
+
+    public void RemoveChaser()
+    {
+        chaserCountUpdated = true;
+
+        chaserCount--;
+
+        chaserCount = Mathf.Clamp(chaserCount, 0, int.MaxValue);
+    }
+
 	void OnBeat(int count)
     {
         //  movePower = 1;
@@ -37,6 +59,22 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (chaserCount > 0)
+        {
+            if (chaserCountUpdated)
+            {
+                chaserCountUpdated = false;
+                BeatManager.SetChased(1);
+
+            }
+        }
+        else if (chaserCountUpdated)
+        {
+            chaserCountUpdated = false;
+
+            BeatManager.SetChased(0);
+        }
+
         InputUpdate();
 		if (Input.GetKeyDown(KeyCode.H))
 		{
@@ -49,24 +87,28 @@ public class Player : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 dir = (mousePos - (Vector2)transform.position).normalized;
 
-        if (Input.GetButtonDown("Fire1") && canMove)
+        if (!movementDisabled)
         {
-            canMove = false;
-
-            if (IsOnBeat)
+            if (Input.GetButtonDown("Fire1") && canMove)
             {
-                dir = dir * moveSpeed;
-            }
-            else
-            {
-                dir = dir * slowMoveSpeed;
-            }
+                canMove = false;
 
-            Invoke("ResetCanJump", 30 / BeatManager.GetCurrentBPM);
-            rigidbody.AddForce(dir, ForceMode2D.Impulse);
-            animator.Play("Jump");
+                if (IsOnBeat)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
+                    dir = dir * moveSpeed;
+                }
+                else
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+                    dir = dir * slowMoveSpeed;
+                }
+
+                Invoke("ResetCanJump", 45 / BeatManager.GetCurrentBPM);
+                rigidbody.AddForce(dir, ForceMode2D.Impulse);
+                animator.Play("Jump");
+            }
         }
-
         if (dir.x > 0)
         {
             sprite.flipX = true;
@@ -94,9 +136,17 @@ public class Player : MonoBehaviour
 
 	public void PickedUpBone()
 	{
-		GameObject newBone;
-		bones++;
-		newBone = Instantiate(UIBone, UIBone.transform.parent);
-		newBone.transform.position += new Vector3(100*bones, 0, 0);
+		if (bones == 0)
+		{
+			bones++;
+			UIBone.SetActive(true);
+		}
+		else
+		{
+			GameObject newBone;
+			bones++;
+			newBone = Instantiate(UIBone, UIBone.transform.parent);
+			newBone.transform.position += new Vector3(100 * bones, 0, 0);
+		}
 	}
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{35d5d8de-015e-4cfb-ba2f-c3df2871e056}">
+        <property name="name">
+            <value>Chased</value>
+        </property>
+        <relationship name="folder">
+            <destination>{0f863bec-2aa5-488a-8e10-19ae4bc641db}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{5e5dee80-6a21-4afa-8df3-edbbae767b26}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{5e5dee80-6a21-4afa-8df3-edbbae767b26}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
   - {fileID: 114136923768405686}
   - {fileID: 114657334102254186}
   EditorEvents:
@@ -19,7 +20,199 @@ MonoBehaviour:
   MasterBankRef: {fileID: 114657334102254186}
   StringsBankRef: {fileID: 114136923768405686}
   stringsBankWriteTime: 636599235543574712
+=======
+  - {fileID: 114780949412611228}
+  - {fileID: 114350333303553278}
+  EditorEvents:
+  - {fileID: 114015628656635328}
+  - {fileID: 114975648664136588}
+  - {fileID: 114922293165540522}
+  - {fileID: 114103534369970450}
+  - {fileID: 114151597055350850}
+  MasterBankRef: {fileID: 114350333303553278}
+  StringsBankRef: {fileID: 114780949412611228}
+  stringsBankWriteTime: 636600357662711135
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
   cacheVersion: 2
+--- !u!114 &114003427299067388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114015628656635328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/AggressiveBass
+  guid: 591a0fb60a132c47a23baef3a2a2d08f
+  Banks:
+  - {fileID: 114350333303553278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8738
+--- !u!114 &114040108429542992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114057509220239936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114060074115325914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114063384297531302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroChords
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114067840545999196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroChords
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114081354772826350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114103534369970450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Jump
+  guid: d524586c3d5ada49936e751b4824cf61
+  Banks:
+  - {fileID: 114350333303553278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 581
+--- !u!114 &114105296665917024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114125526113849608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroBass
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114136923768405686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,11 +225,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
+<<<<<<< HEAD
   lastModified: 636599235543574712
+=======
+  lastModified: 636600325226712940
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 714
+    Value: 924
   Exists: 1
 --- !u!114 &114143995808419164
 MonoBehaviour:
@@ -52,16 +249,218 @@ MonoBehaviour:
   Path: event:/Loop
   guid: 915c0c82984e9e4996d73d1bbca4b684
   Banks:
+<<<<<<< HEAD
   - {fileID: 114657334102254186}
+=======
+  - {fileID: 114442829320858328}
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 114784386806125280}
+=======
+  - {fileID: 114152154912246368}
+  - {fileID: 114060074115325914}
   MinDistance: 0
   MaxDistance: 0
-  Length: 34909
---- !u!114 &114215982872370676
+  Length: 43647
+--- !u!114 &114151597055350850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/JumpFail
+  guid: 446a1ffebdfbc94580359917cf4b4b4a
+  Banks:
+  - {fileID: 114350333303553278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 612
+--- !u!114 &114152154912246368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114209203078122472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114215278152977964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroBass
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114217023455203042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114227416603096032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114255179387847798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114261667788594836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroBass
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114261717174620440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroChords
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114273206329307824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114298863655127938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114308589079444632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Master
+  guid: 20efaa02f405d144bbb1b71854e6d83c
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114350333303553278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -72,15 +471,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: F:\GitHub\Ludum Dare 41\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
+  Path: D:\Workspace\GameJam\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
     Bank.bank
-  lastModified: 636599405747953817
+  lastModified: 636600357662701136
   LoadResult: 0
   FileSizes:
-  - Name: Desktop
-    Value: 455904
+  - Name: 
+    Value: 785248
   Exists: 1
---- !u!114 &114217023455203042
+--- !u!114 &114388181834736594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -108,11 +507,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Workspace\GameJam\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
     Bank.bank
-  lastModified: 636599388154508693
+  lastModified: 636600325226692918
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 455904
+    Value: 727808
   Exists: 1
 --- !u!114 &114444683748739650
 MonoBehaviour:
@@ -129,7 +528,43 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
---- !u!114 &114620765284275376
+--- !u!114 &114476739138707992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroBass
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114525548959489814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Aggressive
+  guid: be4f3812401e0544a644a45fd7b4c14d
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114558706357907210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -144,7 +579,7 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
---- !u!114 &114624395511532396
+--- !u!114 &114567220462148810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -159,7 +594,11 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
+<<<<<<< HEAD
 --- !u!114 &114657334102254186
+=======
+--- !u!114 &114590247992009496
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -167,6 +606,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -179,6 +619,16 @@ MonoBehaviour:
     Value: 455904
   Exists: 1
 --- !u!114 &114784386806125280
+=======
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114620765284275376
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -193,6 +643,64 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &114661372020296732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114667747006198064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/AggressiveBass
+  guid: 591a0fb60a132c47a23baef3a2a2d08f
+  Banks:
+  - {fileID: 114442829320858328}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8738
+--- !u!114 &114780949412611228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636600357662711135
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1056
+  Exists: 1
+>>>>>>> b51e7c28b14a315fed34d12ef7116a1d1cb60dec
 --- !u!114 &114785004953296920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +720,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 455904
   Exists: 1
+--- !u!114 &114798255338769382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114814798782111318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +750,58 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
+--- !u!114 &114858286477679510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: AggroChords
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114893945669594692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114922293165540522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/AngryCat
+  guid: e4e19b97b72eed43bab3d7c977fa7ec3
+  Banks:
+  - {fileID: 114350333303553278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 937
 --- !u!114 &114952825815057094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +821,57 @@ MonoBehaviour:
   - Name: Desktop
     Value: 453120
   Exists: 1
+--- !u!114 &114956636576527650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114975648664136588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Loop
+  guid: 915c0c82984e9e4996d73d1bbca4b684
+  Banks:
+  - {fileID: 114350333303553278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114227416603096032}
+  - {fileID: 114273206329307824}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 43647
+--- !u!114 &114991836164302946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0

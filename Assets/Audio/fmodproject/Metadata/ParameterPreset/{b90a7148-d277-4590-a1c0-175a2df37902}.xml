@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{b90a7148-d277-4590-a1c0-175a2df37902}">
+        <property name="name">
+            <value>Aggressive</value>
+        </property>
+        <relationship name="folder">
+            <destination>{0f863bec-2aa5-488a-8e10-19ae4bc641db}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{adfcb6d5-dc8d-4daa-b21e-cdeef8eed223}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{adfcb6d5-dc8d-4daa-b21e-cdeef8eed223}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
