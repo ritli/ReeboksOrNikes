@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD;
+using System.Collections;
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
 
 public class BeatManager : MonoBehaviour
 {
@@ -17,6 +23,7 @@ public class BeatManager : MonoBehaviour
     float beatTime;
     float currentBeatTime;
     int currentBeat = 0;
+    float songDsp;
 
     public Slider slider;
     public Image sliderImage;
@@ -26,6 +33,7 @@ public class BeatManager : MonoBehaviour
     public static event OnBeat onBeat;
 
     public static BeatManager instance;
+    
 
 
 
@@ -81,13 +89,19 @@ public class BeatManager : MonoBehaviour
 
         emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.Event = MusicEvent;
+        songDsp = (float)AudioSettings.dspTime;
         emitter.Play();
 
         emitter.SetParameter("LoopStage", 1);
+        
+        
+
 
         //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(currentBpm);
     }
+
+
 
     public static void SetChased(float value)
     {
@@ -100,9 +114,9 @@ public class BeatManager : MonoBehaviour
         currentBpm = bpm;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        currentBeatTime += Time.deltaTime / beatTime;
+        currentBeatTime += Time.fixedDeltaTime / beatTime;
 
         if (currentBeatTime > 1)
         {
@@ -113,6 +127,7 @@ public class BeatManager : MonoBehaviour
 
             if (onBeat != null)
             {
+                print(AudioSettings.dspTime);
                 onBeat(currentBeat);
             }
         }

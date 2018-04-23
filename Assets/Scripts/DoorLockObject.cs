@@ -20,7 +20,7 @@ public class DoorLockObject : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetButton("Jump") && playerIsClose)
+		if (Input.GetButtonDown("Jump") && playerIsClose)
 		{
 			gameplayUI.active = true;
 			if (gameplayUI.wins >= 3)

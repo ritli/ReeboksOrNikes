@@ -90,22 +90,26 @@ public class GuardHandler : MonoBehaviour {
             playerDetected = false;
         }
 
-        if (playerDetected)
+        if (playerVisible)
         {
 
-            if (!playerTargetSet)
+            if (playerDetected)
             {
-                currentStayOnTargetTime = 0;
-                BeatManager.GetPlayer.AddChaser();
-                playerTargetSet = true;
-                path.GetComponent<Pathfinding.AIDestinationSetter>().target = BeatManager.GetPlayer.transform;
-                alertMark.enabled = true;
+                if (!playerTargetSet)
+                {
+                    currentStayOnTargetTime = 0;
+                    BeatManager.GetPlayer.AddChaser();
+                    playerTargetSet = true;
+                    path.GetComponent<Pathfinding.AIDestinationSetter>().target = BeatManager.GetPlayer.transform;
+                    alertMark.enabled = true;
 
-                FMODUnity.RuntimeManager.PlayOneShot("event:/AngryCat");
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/AngryCat");
+                }
+
+                currentStayOnTargetTime = Mathf.Clamp(currentStayOnTargetTime, 0, int.MaxValue) - Time.deltaTime;
+
             }
 
-            
-            currentStayOnTargetTime = Mathf.Clamp(currentStayOnTargetTime, 0, int.MaxValue) - Time.deltaTime;
         }
         else
         {
@@ -118,6 +122,8 @@ public class GuardHandler : MonoBehaviour {
             {
                 currentStayOnTargetTime = 0;
 
+                playerDetected = false;
+                timeInVisionCone = 0;
                 BeatManager.GetPlayer.RemoveChaser();
                 playerTargetSet = false;
                 path.GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[currentPatrolPoint].transform;
@@ -141,6 +147,94 @@ public class GuardHandler : MonoBehaviour {
         }
     }
 
+    void VisionUpdate()
+    {
+        if (playerVisible)
+        {
+            timeInVisionCone += Time.deltaTime;
+
+            if (timeInVisionCone > timeToDetect)
+            {
+                playerDetected = true;
+            }
+        }
+        else
+        {
+            /*
+            timeInVisionCone -= Time.deltaTime;
+
+            if (timeInVisionCone <= 0)
+            {
+                playerDetected = false;
+            }
+            */
+        }
+
+        timeInVisionCone = Mathf.Clamp(timeInVisionCone, 0, timeToDetect + 1);
+
+        Vector2 dir = (BeatManager.GetPlayer.transform.position - transform.position).normalized * visionRange;
+
+        if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange && Mathf.Abs(Vector2.Angle(dir, forwardVector.normalized)) < visionAngle)
+        {
+            if (!Physics2D.Raycast(transform.position + Vector3.up * 0.32f, dir, visionRange, obstacleMask))
+            {
+                playerVisible = true;
+
+                print("Player Visible");
+            }
+            else
+            {
+                playerVisible = false;
+            }
+        }
+        else
+        {
+            playerVisible = false;
+        }
+    }
+
+
+    Vector2 VectorTo4Dir(Vector2 input)
+    {
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+        {
+            if (input.x > 0)
+            {
+                if (input.y > 0.4f)
+                {
+                    return new Vector2(1, 1).normalized;
+                }
+                else if (input.y < -0.4f)
+                {
+                    return new Vector2(1, -1).normalized;
+                }
+
+                return Vector2.right;
+            }
+            else
+            {
+                if (input.y > 0.4f)
+                {
+                    return new Vector2(-1, 1).normalized;
+                }
+                else if (input.y < -0.4f)
+                {
+                    return new Vector2(-1, -1).normalized;
+                }
+
+                return Vector2.left;
+            }
+        }
+        else if (input.y > 0)
+        {
+            return Vector2.up;
+        }
+        else
+        {
+            return Vector2.down;
+        }
+    }
+
     void Update() {
         PatrolUpdate();
         VisionUpdate();
@@ -149,12 +243,14 @@ public class GuardHandler : MonoBehaviour {
         if (playerDetected)
         {
             visionRange = Mathf.Lerp(visionRange, alertVisionRange, Time.deltaTime * 2);
-            forwardVector = Vector2.Lerp(forwardVector, (BeatManager.GetPlayer.transform.position - transform.position).normalized, Time.deltaTime * 3).normalized;
+            forwardVector = Vector2.Lerp(forwardVector, VectorTo4Dir((BeatManager.GetPlayer.transform.position - transform.position).normalized), Time.deltaTime * 3).normalized;
         }
         else
         {
             visionRange = Mathf.Lerp(visionRange, idleVisionRange, Time.deltaTime * 2);
-            forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 7).normalized;
+            
+            
+            forwardVector = Vector2.Lerp(forwardVector, VectorTo4Dir(path.velocity2D), Time.deltaTime * 7).normalized;
         }
 
         Debug.DrawLine(transform.position, transform.position + (Vector3)forwardVector);
@@ -182,51 +278,6 @@ public class GuardHandler : MonoBehaviour {
         DrawFOV();
     }
 
-    void VisionUpdate()
-    {
-        if (playerVisible)
-        {
-
-
-            timeInVisionCone += Time.deltaTime;
-
-            if (timeInVisionCone > timeToDetect)
-            {
-                playerDetected = true;    
-            }
-        }
-        else
-        {
-            timeInVisionCone -= Time.deltaTime;
-
-            if (timeInVisionCone <= 0)
-            {
-                playerDetected = false;
-            }
-        }
-
-        timeInVisionCone = Mathf.Clamp(timeInVisionCone, 0, timeToDetect + 1);
-
-        Vector2 dir = (BeatManager.GetPlayer.transform.position - transform.position).normalized * visionRange;
-
-        if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange && Mathf.Abs(Vector2.Angle(dir, forwardVector.normalized)) < visionAngle)
-        {
-            if (!Physics2D.Raycast(transform.position, dir, visionRange, obstacleMask))
-            {
-                playerVisible = true;
-
-                print("Player Detected");
-            }
-            else
-            {
-                playerVisible = false;
-            }
-        }
-        else
-        {
-            playerVisible = false;
-        }
-    }
 
     void DrawFOV()
     {
@@ -293,13 +344,13 @@ public class GuardHandler : MonoBehaviour {
 
       //  Debug.DrawRay(transform.position, dir * visionRange);
 
-        if (Physics2D.Raycast(transform.position, dir * visionRange, filter2D, hit, visionRange) > 0)
+        if (Physics2D.Raycast(transform.position + Vector3.up * 0.32f, dir * visionRange, filter2D, hit, visionRange) > 0)
         {
             return new ViewCastInfo(true, hit[0].point, hit[0].distance, globalAngle);    
         }
         else
         {
-            return new ViewCastInfo(false, transform.position + dir * visionRange, visionRange, globalAngle);
+            return new ViewCastInfo(false, transform.position + Vector3.up * 0.32f + dir * visionRange, visionRange, globalAngle);
         }
     }
 
