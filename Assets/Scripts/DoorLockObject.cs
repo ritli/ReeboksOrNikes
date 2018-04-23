@@ -28,6 +28,10 @@ public class DoorLockObject : MonoBehaviour
                 dialog.GetComponent<StoryHandler>().startDialgoe = true;
 				gameplayUI.active = false;
 				MakeVisible(false);
+                /*if(dialog.GetComponent<StoryHandler>().ac == false)
+                {
+                    Debug.Log("Change shit");
+                }*/
 			}
 		}
 	}

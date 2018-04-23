@@ -8,6 +8,7 @@ public class StoryHandler : MonoBehaviour {
     private bool Started = false;
     public bool startDialgoe = false;
 
+
     // Use this for initialization
     void Start()
     {
@@ -26,10 +27,21 @@ public class StoryHandler : MonoBehaviour {
                 FindObjectOfType<DialogeManager>().startDialoge(dialoge);
                 Started = true;
             }
-            else if (Input.GetKeyUp(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.E))
             {
-                FindObjectOfType<DialogeManager>().DisplayNextDialoge();
+                //Debug.Log("CAlling");
+                int i = FindObjectOfType<DialogeManager>().DisplayNextDialoge();
+                
+                 if(i == 0)
+                 {
+                    kill();
+                 }
             }
         }
+    }
+    public void kill()
+    {
+        Debug.Log("Killing");
+        gameObject.SetActive(false);
     }
 }

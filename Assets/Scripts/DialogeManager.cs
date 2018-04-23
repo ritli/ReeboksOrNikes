@@ -12,6 +12,7 @@ public class DialogeManager : MonoBehaviour {
     public Canvas dialogCanvas;
 
     private GameObject player;
+    private GameObject[] Storys;
 
     private Queue<string> sentences;
 
@@ -21,7 +22,9 @@ public class DialogeManager : MonoBehaviour {
     }
 
     public void startDialoge(Dialoge dialoge)
-    {   
+    {
+        //Debug.Log("yes_1");
+
         player.GetComponent<Player>().movementDisabled = true;
 
         dialogCanvas.gameObject.SetActive(true);
@@ -29,32 +32,39 @@ public class DialogeManager : MonoBehaviour {
                 
         foreach(string sentence in dialoge.sentences)
         {
+           // Debug.Log("yes_2");
             sentences.Enqueue(sentence);
         }
 
-        DisplayNextDialoge();
+        int i = DisplayNextDialoge();
     }
 
-    public void DisplayNextDialoge()
+    public int DisplayNextDialoge()
     {
         Debug.Log("Sencenses count  " + sentences.Count);
 
         if(sentences.Count == 0)
         {
             endDialoge();
-            return;
+            return sentences.Count;
         }
 
-        //Debug.Log(sentences.Dequeue());
         dialogeText.text = sentences.Dequeue();
+
+        return sentences.Count + 1;
+
+        
+
+        //Debug.Log(sentences.Dequeue());
+
     }
 
     private void endDialoge()
     {
         dialogCanvas.gameObject.SetActive(false);
         player.GetComponent<Player>().movementDisabled = false;
-        //sentences.Clear();
-        //Debug.Log("End Dialoge");
+        
+
     }
 
 }
