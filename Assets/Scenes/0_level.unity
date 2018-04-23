@@ -13095,6 +13095,11 @@ Prefab:
       propertyPath: UIBone
       value: 
       objectReference: {fileID: 1553457901}
+    - target: {fileID: 114059954678698798, guid: 5b59207cb0349564caca9f282d8aaa99,
+        type: 2}
+      propertyPath: startingBones
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b59207cb0349564caca9f282d8aaa99, type: 2}
   m_IsPrefabParent: 0

@@ -56,7 +56,10 @@ public class SecCamera : MonoBehaviour
 		{
 			listNumber = 0;
 		}
-		transform.eulerAngles = rotations[listNumber];
+		if (this != null)
+		{
+			transform.eulerAngles = rotations[listNumber];
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D collision)

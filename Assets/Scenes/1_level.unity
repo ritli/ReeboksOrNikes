@@ -16620,41 +16620,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114153431524538784, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: respawn
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114153431524538784, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: fadeScreen
-      value: 
-      objectReference: {fileID: 931441863}
     - target: {fileID: 114059954678698798, guid: 5b59207cb0349564caca9f282d8aaa99,
         type: 2}
       propertyPath: UIBone
       value: 
       objectReference: {fileID: 311676622}
-    - target: {fileID: 50220013522952016, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 212426690911667574, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114059954678698798, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: movementDisabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114059954678698798, guid: 5b59207cb0349564caca9f282d8aaa99,
-        type: 2}
-      propertyPath: startingBones
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b59207cb0349564caca9f282d8aaa99, type: 2}
   m_IsPrefabParent: 0
@@ -21857,6 +21827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bonesToAdvance: 2
   dialog: {fileID: 0}
+  finalLevel: 0
 --- !u!1 &1280431780
 GameObject:
   m_ObjectHideFlags: 0

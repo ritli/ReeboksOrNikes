@@ -48,11 +48,11 @@ public class DoorLockObject : MonoBehaviour
              {
 				if (!finalLevel)
 				{
-					SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+					SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 				}
 				else
 				{
-					SceneManager.LoadSceneAsync(0);
+					SceneManager.LoadScene(0);
 				}
 			 }
         }
