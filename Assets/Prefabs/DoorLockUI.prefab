@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 222101976892100872}
   - component: {fileID: 114536590789702252}
   - component: {fileID: 114983625122514104}
+  - component: {fileID: 95327657743417194}
   m_Layer: 5
   m_Name: DoorLockUI
   m_TagString: Untagged
@@ -75,6 +76,23 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 81127443f77ec9e4ca1114fcb3e82e0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95327657743417194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336233501154094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ebcc5c2728daa249a117d5cf49150ca, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -176,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winEffect: {fileID: 224054196889076492}
   active: 0
+  wins: 0
 --- !u!114 &114983625122514104
 MonoBehaviour:
   m_ObjectHideFlags: 1
