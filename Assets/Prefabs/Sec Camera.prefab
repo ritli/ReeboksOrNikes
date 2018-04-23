@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212340664743319348}
   - component: {fileID: 95603513364499032}
   - component: {fileID: 114033788219031208}
+  - component: {fileID: 60540850733312548}
   m_Layer: 0
   m_Name: Sec Camera
   m_TagString: Untagged
@@ -51,14 +52,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063197313400490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.058615, y: 1.0209271, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.43837118, w: 0.89879405}
+  m_LocalPosition: {x: 10.004, y: -2.983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4159905706917116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52}
 --- !u!4 &4159905706917116
 Transform:
   m_ObjectHideFlags: 1
@@ -72,6 +73,33 @@ Transform:
   m_Father: {fileID: 4123565778230220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60540850733312548
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063197313400490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: -1.1, y: -3.1}
+      - {x: 1.1, y: -3.1}
 --- !u!95 &95603513364499032
 Animator:
   serializedVersion: 3
@@ -102,9 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotations:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 90}
-  - {x: 0, y: 0, z: 180}
-  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!212 &212340664743319348
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorLock : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class DoorLock : MonoBehaviour
 
 	void Open()
 	{
-		//Fade
+		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 		active = false;
 	}
 

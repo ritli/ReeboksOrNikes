@@ -64,7 +64,6 @@ public class FailState : MonoBehaviour
     {
         if (hittable)
         {
-            print("Respawning player");
             fadeOut = true;
             hittable = false;
 
@@ -76,13 +75,5 @@ public class FailState : MonoBehaviour
 	{
         currentToAlpha = Mathf.Lerp(currentToAlpha, toAlpha, Time.deltaTime * fadeSpeed);
         newColor.a = currentToAlpha;
-
-        if (Input.GetKeyDown(KeyCode.Y))
-		{
-			fadeOut = true;
-            hittable = false;
-
-            BeatManager.GetPlayer.movementDisabled = true;
-        }
 	}
 }
