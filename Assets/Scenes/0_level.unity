@@ -4695,7 +4695,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985882648}
-<<<<<<< HEAD
 --- !u!1 &1009191582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4725,9 +4724,6 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057409426 stripped
-=======
---- !u!1 &1057409426
->>>>>>> 20a49d4ba8364f08ecd552e6e9c34c00596c5482
 GameObject:
   m_PrefabParentObject: {fileID: 1087684114434638, guid: d8d70ccdcf6f91344be56819d1ceee35,
     type: 2}

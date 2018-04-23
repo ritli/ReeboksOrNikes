@@ -180,7 +180,7 @@ public class GuardHandler : MonoBehaviour {
             {
                 playerVisible = true;
 
-                print("Player Visible");
+
             }
             else
             {

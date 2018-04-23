@@ -66,7 +66,7 @@ public class SecCamera : MonoBehaviour
 	{
 		seeingPlayer = true;
 		dangerLevel += Time.deltaTime;
-		if (dangerLevel >= 2f)
+		if (dangerLevel >= 3f)
 		{
 			BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
 		}
