@@ -19,16 +19,16 @@ public class Player : MonoBehaviour
 
 	[HideInInspector] public int bones;
 	public GameObject UIBone;
+	public int startingBones;
 
     public int chaserCount = 0;
     bool chaserCountUpdated = false;
+
     public bool movementDisabled = false;
     bool audioPrimed = false;
 
-
     public void AddChaser()
     {
-
         chaserCountUpdated = true;
         chaserCount++;
     }
@@ -55,6 +55,18 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         animator.SetFloat("SpeedMultiplier", BeatManager.GetCurrentBPM / 60);
+
+		bones = startingBones;
+		if (bones > 0)
+		{
+			UIBone.SetActive(true);
+		}
+		GameObject newBone;
+		for (int i = 0; i < bones; i++)
+		{
+			newBone = Instantiate(UIBone, UIBone.transform.parent);
+			newBone.transform.position += new Vector3(100 * i, 0, 0);
+		}
     }
 
     void Update()
@@ -76,10 +88,6 @@ public class Player : MonoBehaviour
         }
 
         InputUpdate();
-		if (Input.GetKeyDown(KeyCode.H))
-		{
-			PickedUpBone();
-		}
     }
 
     void InputUpdate()
@@ -109,6 +117,7 @@ public class Player : MonoBehaviour
                 animator.Play("Jump");
             }
         }
+
         if (dir.x > 0)
         {
             sprite.flipX = true;
