@@ -13,7 +13,7 @@ public class BeatManager : MonoBehaviour
 
     FMODUnity.StudioEventEmitter emitter;
 
-    float currentBpm = 110;
+    public float currentBpm = 110;
     float beatTime;
     float currentBeatTime;
     int currentBeat = 0;
@@ -26,6 +26,8 @@ public class BeatManager : MonoBehaviour
     public static event OnBeat onBeat;
 
     public static BeatManager instance;
+
+
 
     public static Player GetPlayer
     {
@@ -84,7 +86,7 @@ public class BeatManager : MonoBehaviour
         emitter.SetParameter("LoopStage", 1);
 
         //.GetBus("AggressiveBass").setVolume(0);
-        SetBPM(110);
+        SetBPM(currentBpm);
     }
 
     public static void SetChased(float value)
