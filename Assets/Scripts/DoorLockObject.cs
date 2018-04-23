@@ -45,6 +45,7 @@ public class DoorLockObject : MonoBehaviour
              if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
              {
                  Debug.Log("Change scene");
+                levelClear = false;
              }
         }
     }
