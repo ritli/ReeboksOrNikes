@@ -92,6 +92,9 @@
         <property name="length">
             <value>0.93750566893424037</value>
         </property>
+        <property name="pitch">
+            <value>-5.5</value>
+        </property>
         <relationship name="sounds">
             <destination>{2eddecc1-33a6-4ef0-bf3c-3eca7f6a853f}</destination>
             <destination>{54037092-569d-4e7f-90b0-64b411523552}</destination>
@@ -129,7 +132,7 @@
     </object>
     <object class="SingleSound" id="{54037092-569d-4e7f-90b0-64b411523552}">
         <property name="pitch">
-            <value>-3</value>
+            <value>-1.60000002</value>
         </property>
         <relationship name="audioFile">
             <destination>{73736f8e-f6d5-4aee-8132-48a852d36ab5}</destination>

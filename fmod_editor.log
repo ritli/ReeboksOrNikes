@@ -8,7 +8,7 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000041521C28 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000004CF4C738 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,9 +16,121 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2271712
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004FD1F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FEC8D3E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FEC8D3E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FEC8D3E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FEC8D3E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004C73DFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump1', format=2, channels=2, frequency=48000, lengthbytes=7328, lengthpcm=27922, pcmblocksize=0, loopstart=0, loopend=27690, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.596649.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2271712
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004FD1F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FEC8D3E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FEC8D3E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FEC8D3E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FEC8D3E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004C73DFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='JumpFail3', format=2, channels=2, frequency=48000, lengthbytes=5344, lengthpcm=27922, pcmblocksize=0, loopstart=0, loopend=27690, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.135773.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2271712
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004FD1F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FEC8D3E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FEC8D3E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FEC8D3E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FEC8D3E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004C73DFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='JumpFail4', format=2, channels=2, frequency=48000, lengthbytes=2592, lengthpcm=11307, pcmblocksize=0, loopstart=0, loopend=11075, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.274261.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2271712
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004FD1F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FEC8D3E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FEC8D3E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FEC8D3E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FEC8D3E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004C73DFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='JumpFail1', format=2, channels=2, frequency=48000, lengthbytes=3584, lengthpcm=16845, pcmblocksize=0, loopstart=0, loopend=16613, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.242920.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2271712
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000004FD1F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 000007FEC8D3E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 000007FEC8D3E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 000007FEC8D3E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 000007FEC8D3E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004C73DFF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='JumpFail2', format=2, channels=2, frequency=48000, lengthbytes=4320, lengthpcm=22384, pcmblocksize=0, loopstart=0, loopend=22152, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.126099.
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          :  (000000004C716948)
+[LOG] SoundI::release                          :     JumpFail1 (000000004D3D5F98)
+[LOG] SoundI::release                          :  (000000004C716AB8)
+[LOG] SoundI::release                          :     JumpFail2 (000000004D3D6138)
+[LOG] SoundI::release                          :  (000000004C716668)
+[LOG] SoundI::release                          :     JumpFail3 (000000004D3D5C58)
+[LOG] SoundI::release                          :  (000000004C7167D8)
+[LOG] SoundI::release                          :     JumpFail4 (000000004D3D5DF8)
+[LOG] SoundI::release                          :  (000000004C7164F8)
+[LOG] SoundI::release                          :     Jump1 (000000004D3D5AB8)
+[LOG] SoundI::release                          :  (000000004C715F38)
+[LOG] SoundI::release                          :     IntroLoop (00000000401F2EE8)
+[LOG] SoundI::release                          :  (000000000F238038)
+[LOG] SoundI::release                          :     IntroLoopBreak (00000000401F2A08)
+[LOG] SoundI::release                          :  (000000004C716218)
+[LOG] SoundI::release                          :     AggresiveBass (00000000401F2868)
+[LOG] SoundI::release                          :  (000000004C7160A8)
+[LOG] SoundI::release                          :     Loop1Start (00000000401F2528)
+[LOG] SoundI::release                          :  (000000000F237EC8)
+[LOG] SoundI::release                          :     AggressiveChords (00000000401F3228)
+[LOG] SoundI::release                          :  (000000004C716388)
+[LOG] SoundI::release                          :     Loop1 (00000000401F3088)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

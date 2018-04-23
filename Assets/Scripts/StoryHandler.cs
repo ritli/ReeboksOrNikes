@@ -26,13 +26,18 @@ public class StoryHandler : MonoBehaviour {
                 Debug.Log("Name   " + dialoge.name);
                 FindObjectOfType<DialogeManager>().startDialoge(dialoge);
                 Started = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+
+
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.E))
             {
                 //Debug.Log("CAlling");
                 int i = FindObjectOfType<DialogeManager>().DisplayNextDialoge();
-                
-                 if(i == 0)
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+
+                if (i == 0)
                  {
                     kill();
                  }
