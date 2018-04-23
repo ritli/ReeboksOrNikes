@@ -5,16 +5,21 @@ using UnityEngine;
 public class DangerTile : MonoBehaviour
 {
 	public bool startMode;
-	public Collider col;
 	
 	private Animator anim;
-	private GameObject player;
+	private int secondCount;
+	private bool currentMode;
 
 	void OnBeat(int count)
 	{
-		if (count == 1)
+		if (count == 0)
 		{
-			anim.SetBool("onOrOff", !anim.GetBool("onOrOff"));
+			secondCount++;
+			if (secondCount == 2)
+			{
+				anim.SetBool("onOrOff", !anim.GetBool("onOrOff"));
+				secondCount = 0;
+			}
 		}
 	}
 
@@ -23,27 +28,18 @@ public class DangerTile : MonoBehaviour
 		BeatManager.onBeat += OnBeat;
 		anim = GetComponent<Animator>();
 		anim.SetBool("onOrOff", startMode);
-		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update ()
 	{
-		if (anim.GetBool("onOrOff"))
-		{
-			Online();
-		}
+		currentMode = anim.GetBool("onOrOff");
 	}
 
-	void Online()
+	void OnTriggerStay2D(Collider2D collision)
 	{
-		Collider[] cols = Physics.OverlapBox(transform.position, transform.localScale / 2);
-
-		for (int i = 0; i < cols.Length; i++)
+		if (currentMode && collision.CompareTag("Feet"))
 		{
-			if (cols[i] == player.GetComponent<Collider>())
-			{
-				BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
-			}
+			BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
 		}
 	}
 }

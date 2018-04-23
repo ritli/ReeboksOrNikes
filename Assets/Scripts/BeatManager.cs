@@ -35,8 +35,6 @@ public class BeatManager : MonoBehaviour
     public static BeatManager instance;
     
 
-
-
     public static Player GetPlayer
     {
         get
@@ -65,6 +63,7 @@ public class BeatManager : MonoBehaviour
     public static void RestartPlayer()
     {
         GetPlayer.transform.position = instance.spawnPoint.transform.position;
+		GetPlayer.RespawnBones();
     }
 
     void Start()
@@ -99,7 +98,7 @@ public class BeatManager : MonoBehaviour
 
         //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(currentBpm);
-    }
+	}
 
 
 

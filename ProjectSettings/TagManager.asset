@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DoorLock
   - Enemy
+  - Bone
+  - Feet
   layers:
   - Default
   - TransparentFX

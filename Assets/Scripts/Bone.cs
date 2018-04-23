@@ -8,13 +8,11 @@ public class Bone : MonoBehaviour
 	{
 		if (collision.CompareTag("Player"))
 		{
+
             FMODUnity.RuntimeManager.PlayOneShot("event:/Crunch");
 
-
-            collision.GetComponent<Player>().PickedUpBone();
-			Destroy(gameObject);
-
-
+			collision.GetComponent<Player>().PickedUpBone();
+			gameObject.SetActive(false);
 		}
 	}
 }

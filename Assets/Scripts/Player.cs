@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
     public bool movementDisabled = false;
     bool audioPrimed = false;
 
-    public void AddChaser()
+	[HideInInspector] public Bone[] bonesArray;
+	[HideInInspector] public List<GameObject> UIBonesArray;
+
+	public void AddChaser()
     {
         chaserCountUpdated = true;
         chaserCount++;
@@ -67,7 +70,8 @@ public class Player : MonoBehaviour
 			newBone = Instantiate(UIBone, UIBone.transform.parent);
 			newBone.transform.position += new Vector3(100 * i, 0, 0);
 		}
-    }
+		bonesArray = FindObjectsOfType<Bone>();
+	}
 
     void Update()
     {
@@ -153,9 +157,23 @@ public class Player : MonoBehaviour
 		else
 		{
 			GameObject newBone;
-			bones++;
 			newBone = Instantiate(UIBone, UIBone.transform.parent);
 			newBone.transform.position += new Vector3(100 * bones, 0, 0);
+			UIBonesArray.Add(newBone);
+			bones++;
+		}
+	}
+
+	public void RespawnBones()
+	{
+		bones = startingBones;
+		for (int i = 0; i < bonesArray.Length; i++)
+		{
+			bonesArray[i].gameObject.SetActive(true);
+		}
+		for (int i = 0; i < UIBonesArray.Count; i++)
+		{
+			Destroy(UIBonesArray[i]);
 		}
 	}
 }
