@@ -35,6 +35,11 @@ public class BeatManager : MonoBehaviour
     public static BeatManager instance;
     
 
+    public static void SetLoopStage(float amount)
+    {
+        instance.emitter.SetParameter("LoopStage", amount);
+    }
+
     public static Player GetPlayer
     {
         get
@@ -90,11 +95,6 @@ public class BeatManager : MonoBehaviour
         emitter.Event = MusicEvent;
         songDsp = (float)AudioSettings.dspTime;
         emitter.Play();
-
-        emitter.SetParameter("LoopStage", 1);
-        
-        
-
 
         //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(currentBpm);

@@ -25,7 +25,7 @@ public class DoorLockObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && playerIsClose)
+        if (Input.GetButtonDown("Fire1") && playerIsClose)
         {
 
             gameplayUI.active = true;

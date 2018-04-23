@@ -126,7 +126,10 @@
             <value>21.333333333333329</value>
         </property>
         <property name="length">
-            <value>14.222222222222221</value>
+            <value>14.222222222222218</value>
+        </property>
+        <property name="timelockedOffset">
+            <value>0.0034722222222249854</value>
         </property>
         <relationship name="audioFile">
             <destination>{d99af4b2-d80d-4348-9917-2065fe703ad2}</destination>
@@ -190,7 +193,7 @@
     </object>
     <object class="LoopRegion" id="{cf7f9332-0837-44cd-9b20-56e596cfd517}">
         <property name="position">
-            <value>21.344999999999999</value>
+            <value>21.333333333333329</value>
         </property>
         <property name="length">
             <value>14.22222222222222</value>
@@ -207,10 +210,10 @@
     </object>
     <object class="LoopRegion" id="{d8bc9b01-1e51-4cb6-9fba-5f5c9b5ceff2}">
         <property name="position">
-            <value>35.56722222222222</value>
+            <value>35.55555555555555</value>
         </property>
         <property name="length">
-            <value>28.432777777777773</value>
+            <value>28.444444444444443</value>
         </property>
         <relationship name="triggerConditions">
             <destination>{9f4a0dc3-0c75-4c67-8255-9cfdd341af71}</destination>

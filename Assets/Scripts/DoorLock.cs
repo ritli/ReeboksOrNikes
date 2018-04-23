@@ -24,7 +24,7 @@ public class DoorLock : MonoBehaviour
 		{
 			Spin();
 
-			if (Input.GetButtonDown("Jump") && IsOnBeat && (transform.eulerAngles.z < 30f || transform.eulerAngles.z > 330f))
+			if (Input.GetButtonDown("Fire1") && IsOnBeat && (transform.eulerAngles.z < 30f || transform.eulerAngles.z > 330f))
 			{
 				if (transform.eulerAngles.z < 5 || transform.eulerAngles.z > 355)
 				{
