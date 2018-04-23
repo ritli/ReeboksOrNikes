@@ -54,3 +54,4 @@ MonoBehaviour:
   dialogeText: {fileID: 0}
   npcFace: {fileID: 0}
   dialogCanvas: {fileID: 0}
+  isActive: 0

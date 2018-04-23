@@ -7,7 +7,7 @@ public class StoryHandler : MonoBehaviour {
     public Dialoge dialoge;
     private bool Started = false;
     public bool startDialgoe = false;
-
+    public bool done = false;
 
     // Use this for initialization
     void Start()
@@ -41,6 +41,7 @@ public class StoryHandler : MonoBehaviour {
     }
     public void kill()
     {
+
         Debug.Log("Killing");
         gameObject.SetActive(false);
     }

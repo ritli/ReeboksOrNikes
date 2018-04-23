@@ -9,6 +9,7 @@ public class SecCamera : MonoBehaviour
 	private int beatCounter;
 	private int listNumber;
 	private float dangerLevel;
+	private bool seeingPlayer;
 	private Color coneColor;
 
 	void Start()
@@ -21,7 +22,7 @@ public class SecCamera : MonoBehaviour
 
 	void Update()
 	{
-		if (dangerLevel > 0 && !GetComponent<Animator>().GetBool("PlayerInView"))
+		if (dangerLevel > 0 && !seeingPlayer)
 		{
 			dangerLevel -= Time.deltaTime * 0.5f;
 			if (dangerLevel < 0)
@@ -30,7 +31,7 @@ public class SecCamera : MonoBehaviour
 			}
 		}
 
-		coneColor.a = dangerLevel;
+		coneColor.a = dangerLevel * 0.5f;
 		if (coneColor.a < 0.25f)
 		{
 			coneColor.a = 0.25f;
@@ -41,7 +42,7 @@ public class SecCamera : MonoBehaviour
 	void OnBeat(int count)
 	{
 		beatCounter++;
-		if (beatCounter >= 8)
+		if (beatCounter >= 8 && !seeingPlayer)
 		{
 			SwitchRotation();
 			beatCounter = 0;
@@ -55,14 +56,17 @@ public class SecCamera : MonoBehaviour
 		{
 			listNumber = 0;
 		}
-		transform.eulerAngles = rotations[listNumber];
+		if (this != null)
+		{
+			transform.eulerAngles = rotations[listNumber];
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D collision)
 	{
-		GetComponent<Animator>().SetBool("PlayerInView", true);
+		seeingPlayer = true;
 		dangerLevel += Time.deltaTime;
-		if (dangerLevel >= 3)
+		if (dangerLevel >= 3f)
 		{
 			BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
 		}
@@ -70,6 +74,6 @@ public class SecCamera : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
-		GetComponent<Animator>().SetBool("PlayerInView", false);
+		seeingPlayer = false;
 	}
 }

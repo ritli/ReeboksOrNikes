@@ -15,7 +15,7 @@ public class DangerTile : MonoBehaviour
 		if (count == 0)
 		{
 			secondCount++;
-			if (secondCount == 2)
+			if (secondCount == 2 && this != null)
 			{
 				anim.SetBool("onOrOff", !anim.GetBool("onOrOff"));
 				secondCount = 0;

@@ -59,7 +59,6 @@ public class DoorLock : MonoBehaviour
 
 	void Open()
 	{
-		//Fade
 		active = false;
 	}
 

@@ -931,6 +931,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376722319}
+--- !u!1001 &381628853
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.094511986
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.4321107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.34638956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054716832063562, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &402196398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,54 +1204,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &531895972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 531895974}
-  - component: {fileID: 531895973}
-  m_Layer: 9
-  m_Name: Dialog_dave_start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &531895973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 531895972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29e50cae8ebb1f4b90945f630c1d5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoge:
-    name: Dave
-    sprite: {fileID: 21300000, guid: 5f8e7114459aeeb40a2f3b6c7fd45324, type: 3}
-    sentences:
-    - "Oh! This place is packed, well that not a reason for me to puss out!\t"
-    - "I have a bone to pick with Cate, so i hope she is ready for someone thats more...\t"
-    - Bite than bark!
-  startDialgoe: 1
---- !u!4 &531895974
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 531895972}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.094511986, y: -1.4321107, z: 0.34638956}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!223 &551297296 stripped
 Canvas:
   m_PrefabParentObject: {fileID: 223394985210024182, guid: 05d093318742ce943a08b67f578098d0,
@@ -1292,6 +1286,14 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1807999483}
+    - target: {fileID: 4465710370808774, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465710370808774, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
   m_IsPrefabParent: 0
@@ -1558,7 +1560,6 @@ MonoBehaviour:
   - {fileID: 698426118}
   - {fileID: 1322743136}
   - {fileID: 1623598461}
-  - {fileID: 1009191582}
   DebugColor: {r: 0.77931035, g: 1, b: 0, a: 1}
 --- !u!4 &595543732
 Transform:
@@ -1575,7 +1576,6 @@ Transform:
   - {fileID: 698426119}
   - {fileID: 1322743137}
   - {fileID: 1623598462}
-  - {fileID: 1009191583}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3647,7 +3647,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 698426118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.46, y: -0.26, z: -3.5332031}
+  m_LocalPosition: {x: 3.47, y: -1.67, z: -3.5332031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 595543732}
@@ -4723,53 +4723,11 @@ Transform:
   m_Father: {fileID: 595543732}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1057409426
+--- !u!1 &1057409426 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1057409428}
-  - component: {fileID: 1057409427}
-  m_Layer: 9
-  m_Name: Dialog_Cate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1057409427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1057409426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29e50cae8ebb1f4b90945f630c1d5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoge:
-    name: Cate
-    sprite: {fileID: 21300000, guid: 394f717d6f42adf4198fef8e8dae491c, type: 3}
-    sentences:
-    - "It's a DOG in the club!\t"
-    - LEt's ruff him up!
-  startDialgoe: 0
---- !u!4 &1057409428
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1057409426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35682714, y: -1.805947, z: 0.38338456}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_PrefabParentObject: {fileID: 1087684114434638, guid: d8d70ccdcf6f91344be56819d1ceee35,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885613337}
 --- !u!1001 &1113481843
 Prefab:
   m_ObjectHideFlags: 0
@@ -5579,6 +5537,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114570649654919846, guid: 859128cc587713b4b84b02610566c9cd,
+        type: 2}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 1057409426}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 859128cc587713b4b84b02610566c9cd, type: 2}
   m_IsPrefabParent: 0
@@ -5677,7 +5640,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322743136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9, y: -0.06, z: -3.5332031}
+  m_LocalPosition: {x: 5.92, y: -4.6, z: -3.5332031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 595543732}
@@ -6432,7 +6395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529559390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.63, y: 2.99, z: 0}
+  m_LocalPosition: {x: -3.08, y: 3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1879513408}
@@ -6694,9 +6657,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114309220225022224, guid: 2dd68f20fc1b8064d8c99bf269436be1,
         type: 2}
-      propertyPath: dialogCanvas
+      propertyPath: dialogeText
       value: 
-      objectReference: {fileID: 551297296}
+      objectReference: {fileID: 984123338}
     - target: {fileID: 114309220225022224, guid: 2dd68f20fc1b8064d8c99bf269436be1,
         type: 2}
       propertyPath: npcFace
@@ -6704,13 +6667,9 @@ Prefab:
       objectReference: {fileID: 1794201934}
     - target: {fileID: 114309220225022224, guid: 2dd68f20fc1b8064d8c99bf269436be1,
         type: 2}
-      propertyPath: dialogeText
+      propertyPath: dialogCanvas
       value: 
-      objectReference: {fileID: 984123338}
-    - target: {fileID: 1271624960940368, guid: 2dd68f20fc1b8064d8c99bf269436be1, type: 2}
-      propertyPath: m_Name
-      value: Dialoge
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 551297296}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd68f20fc1b8064d8c99bf269436be1, type: 2}
   m_IsPrefabParent: 0
@@ -6809,7 +6768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1623598461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.55, y: -3.1, z: -3.5332031}
+  m_LocalPosition: {x: 9.94, y: -5.04, z: -3.5332031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 595543732}
@@ -7420,6 +7379,48 @@ Transform:
   m_Father: {fileID: 1529559391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1885613337
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.35682714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.805947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.38338456
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1890757206
 GameObject:
   m_ObjectHideFlags: 0
@@ -13112,6 +13113,11 @@ Prefab:
       propertyPath: UIBone
       value: 
       objectReference: {fileID: 1553457901}
+    - target: {fileID: 114059954678698798, guid: 5b59207cb0349564caca9f282d8aaa99,
+        type: 2}
+      propertyPath: startingBones
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b59207cb0349564caca9f282d8aaa99, type: 2}
   m_IsPrefabParent: 0
