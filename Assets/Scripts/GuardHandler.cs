@@ -60,6 +60,7 @@ public class GuardHandler : MonoBehaviour {
 
         alertMark = transform.Find("Alert").GetComponent<SpriteRenderer>();
         alertmarkOffset = alertMark.transform.localPosition.x;
+        alertMark.enabled = false;
 
         viewMeshFilter = GetComponentInChildren<MeshFilter>();
         coneMeshRenderer = GetComponentInChildren<MeshRenderer>();
@@ -84,6 +85,9 @@ public class GuardHandler : MonoBehaviour {
         if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < killRadius)
         {
             BeatManager.GetPlayer.GetComponentInChildren<FailState>().RespawnPlayer();
+
+            currentStayOnTargetTime = stayOnTargetTime;
+            playerDetected = false;
         }
 
         if (playerDetected)
@@ -150,7 +154,7 @@ public class GuardHandler : MonoBehaviour {
         else
         {
             visionRange = Mathf.Lerp(visionRange, idleVisionRange, Time.deltaTime * 2);
-            forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 3).normalized;
+            forwardVector = Vector2.Lerp(forwardVector, path.velocity2D, Time.deltaTime * 7).normalized;
         }
 
         Debug.DrawLine(transform.position, transform.position + (Vector3)forwardVector);
@@ -193,7 +197,7 @@ public class GuardHandler : MonoBehaviour {
         }
         else
         {
-            timeInVisionCone -= Time.deltaTime * 3;
+            timeInVisionCone -= Time.deltaTime;
 
             if (timeInVisionCone <= 0)
             {
@@ -204,8 +208,6 @@ public class GuardHandler : MonoBehaviour {
         timeInVisionCone = Mathf.Clamp(timeInVisionCone, 0, timeToDetect + 1);
 
         Vector2 dir = (BeatManager.GetPlayer.transform.position - transform.position).normalized * visionRange;
-
-        //print(Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position));
 
         if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange && Mathf.Abs(Vector2.Angle(dir, forwardVector.normalized)) < visionAngle)
         {
