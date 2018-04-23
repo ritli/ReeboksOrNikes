@@ -9,7 +9,7 @@ public class Bone : MonoBehaviour
 		if (collision.CompareTag("Player"))
 		{
 			collision.GetComponent<Player>().PickedUpBone();
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
 	}
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114556532144942192}
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   EditorEvents:
   - {fileID: 114032596541354774}
   - {fileID: 114490525748200948}
@@ -21,9 +21,9 @@ MonoBehaviour:
   - {fileID: 114882603178266274}
   - {fileID: 114252210393939244}
   - {fileID: 114407120039862364}
-  MasterBankRef: {fileID: 114740879124819810}
+  MasterBankRef: {fileID: 114921914003030528}
   StringsBankRef: {fileID: 114556532144942192}
-  stringsBankWriteTime: 636600503170436262
+  stringsBankWriteTime: 636600841011411505
   cacheVersion: 2
 --- !u!114 &114032596541354774
 MonoBehaviour:
@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: event:/JumpFail
   guid: 446a1ffebdfbc94580359917cf4b4b4a
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -81,6 +81,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 785248
   Exists: 1
+--- !u!114 &114154221695504630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114187057886475826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,13 +110,13 @@ MonoBehaviour:
   Path: event:/Loop
   guid: 915c0c82984e9e4996d73d1bbca4b684
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114784640503729150}
-  - {fileID: 114313295218718768}
+  - {fileID: 114154221695504630}
+  - {fileID: 114309688570160560}
   MinDistance: 0
   MaxDistance: 0
   Length: 43647
@@ -119,7 +134,7 @@ MonoBehaviour:
   Path: event:/AngryCat
   guid: e4e19b97b72eed43bab3d7c977fa7ec3
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -127,6 +142,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 937
+--- !u!114 &114309688570160560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114313295218718768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +201,7 @@ MonoBehaviour:
   Path: event:/Loop1
   guid: 7314acbca79bba429e3279220d215c12
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -193,7 +223,7 @@ MonoBehaviour:
   Path: event:/AggressiveBass
   guid: 591a0fb60a132c47a23baef3a2a2d08f
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -228,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636600503170436262
+  lastModified: 636600841011411505
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -252,7 +282,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1149408
-  Exists: 1
+  Exists: 0
 --- !u!114 &114784640503729150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +312,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: d524586c3d5ada49936e751b4824cf61
   Banks:
-  - {fileID: 114740879124819810}
+  - {fileID: 114921914003030528}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -290,6 +320,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 581
+--- !u!114 &114921914003030528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: F:\GitHub\Ludum Dare 41\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636600841011391451
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1149408
+  Exists: 1
 --- !u!114 &114960591082527428
 MonoBehaviour:
   m_ObjectHideFlags: 0
