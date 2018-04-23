@@ -11,48 +11,50 @@ public class DialogeManager : MonoBehaviour {
     public Image npcFace;
     public Canvas dialogCanvas;
 
+    private GameObject player;
+
     private Queue<string> sentences;
 
 	void Start () {
         sentences = new Queue<string>();
-	}
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public void startDialoge(Dialoge dialoge)
-    {
+    {   
+        player.GetComponent<Player>().movementDisabled = true;
 
         dialogCanvas.gameObject.SetActive(true);
         npcFace.sprite = dialoge.sprite;
-        //npcName.text = dialoge.name;
-        
+                
         foreach(string sentence in dialoge.sentences)
         {
             sentences.Enqueue(sentence);
         }
 
         DisplayNextDialoge();
-        
-
-        //Debug.Log("Pratar med  " + dialoge.name);
     }
 
     public void DisplayNextDialoge()
     {
         Debug.Log("Sencenses count  " + sentences.Count);
 
-        if(sentences.Count < 1)
+        if(sentences.Count == 0)
         {
             endDialoge();
+            return;
         }
 
         //Debug.Log(sentences.Dequeue());
         dialogeText.text = sentences.Dequeue();
-        //string sentence = sentences.Dequeue();
     }
 
     private void endDialoge()
     {
-        dialogCanvas.enabled = false;
-        Debug.Log("End Dialoge");
+        dialogCanvas.gameObject.SetActive(false);
+        player.GetComponent<Player>().movementDisabled = false;
+        //sentences.Clear();
+        //Debug.Log("End Dialoge");
     }
 
 }

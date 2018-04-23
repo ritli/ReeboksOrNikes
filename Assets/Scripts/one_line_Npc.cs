@@ -36,7 +36,7 @@ public class one_line_Npc : MonoBehaviour {
     {
         if (collision.gameObject.tag == ("Player"))
         {
-            Debug.Log("in collision");
+            //Debug.Log("in collision");
             if (hasDialoge)
             { 
                 bubble.SetActive(true);
