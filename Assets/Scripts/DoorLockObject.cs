@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorLockObject : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class DoorLockObject : MonoBehaviour
     public GameObject dialog;
     private bool levelClear = false;
     private GameObject player;
+
+	public bool finalLevel;
 
     private void Start()
 	{
@@ -41,11 +44,17 @@ public class DoorLockObject : MonoBehaviour
         }
         if (levelClear)
         {
-           
              if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
              {
-                 Debug.Log("Change scene");
-             }
+				if (!finalLevel)
+				{
+					SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+				}
+				else
+				{
+					SceneManager.LoadSceneAsync(0);
+				}
+			 }
         }
     }
 
