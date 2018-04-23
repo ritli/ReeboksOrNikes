@@ -10,31 +10,44 @@ public class DoorLockObject : MonoBehaviour
 	private DoorLock gameplayUI;
 	private bool playerIsClose;
 
-    private GameObject dialog;
+    public GameObject dialog;
+    private bool levelClear = false;
+    private GameObject player;
 
     private void Start()
 	{
 		gameplayUI = GameObject.FindGameObjectWithTag("DoorLock").GetComponent<DoorLock>();
-        dialog = GameObject.Find("Dialog_Cate");
+        player = (GameObject.FindGameObjectWithTag("Player"));
     }
 
-	void Update()
-	{
-		if (Input.GetButtonDown("Jump") && playerIsClose)
-		{
-			gameplayUI.active = true;
-			if (gameplayUI.wins >= 3)
-			{
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump") && playerIsClose)
+        {
+
+            gameplayUI.active = true;
+            if (gameplayUI.wins >= 3)
+            {
                 dialog.GetComponent<StoryHandler>().startDialgoe = true;
-				gameplayUI.active = false;
-				MakeVisible(false);
+                gameplayUI.active = false;
+                MakeVisible(false);
+                levelClear = true;
+
                 /*if(dialog.GetComponent<StoryHandler>().ac == false)
                 {
                     Debug.Log("Change shit");
                 }*/
-			}
-		}
-	}
+            }
+        }
+        if (levelClear)
+        {
+           
+             if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
+             {
+                 Debug.Log("Change scene");
+             }
+        }
+    }
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{

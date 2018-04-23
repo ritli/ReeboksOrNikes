@@ -10,6 +10,7 @@ public class DialogeManager : MonoBehaviour {
     public Text dialogeText;
     public Image npcFace;
     public Canvas dialogCanvas;
+    public bool isActive;
 
     private GameObject player;
     private GameObject[] Storys;
@@ -23,6 +24,7 @@ public class DialogeManager : MonoBehaviour {
 
     public void startDialoge(Dialoge dialoge)
     {
+        isActive = true;
         //Debug.Log("yes_1");
 
         player.GetComponent<Player>().movementDisabled = true;
@@ -61,10 +63,12 @@ public class DialogeManager : MonoBehaviour {
 
     private void endDialoge()
     {
+        isActive = false;
         dialogCanvas.gameObject.SetActive(false);
         player.GetComponent<Player>().movementDisabled = false;
-        
+       
 
     }
+
 
 }
