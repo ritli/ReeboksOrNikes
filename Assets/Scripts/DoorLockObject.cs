@@ -10,10 +10,13 @@ public class DoorLockObject : MonoBehaviour
 	private DoorLock gameplayUI;
 	private bool playerIsClose;
 
-	private void Start()
+    private GameObject dialog;
+
+    private void Start()
 	{
 		gameplayUI = GameObject.FindGameObjectWithTag("DoorLock").GetComponent<DoorLock>();
-	}
+        dialog = GameObject.Find("Dialog_Cate");
+    }
 
 	void Update()
 	{
@@ -22,6 +25,7 @@ public class DoorLockObject : MonoBehaviour
 			gameplayUI.active = true;
 			if (gameplayUI.wins >= 3)
 			{
+                dialog.GetComponent<StoryHandler>().startDialgoe = true;
 				gameplayUI.active = false;
 				MakeVisible(false);
 			}
