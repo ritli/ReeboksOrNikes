@@ -44,7 +44,6 @@ public class DoorLockObject : MonoBehaviour
     {
         if (levelClear)
         {
-
             if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
             {
                 if (!finalLevel)
@@ -66,6 +65,7 @@ public class DoorLockObject : MonoBehaviour
 		{
 			playerIsClose = true;
 			MakeVisible(true);
+			BeatManager.GetPlayer.movementDisabled = true;
 		}
 	}
 

@@ -55,6 +55,7 @@ public class DoorLock : MonoBehaviour
 	void Win()
 	{
 		winEffect.GetComponent<Animator>().SetTrigger("Win");
+		winEffect.transform.parent.GetComponent<Animator>().SetInteger("Wins", wins);
 	}
 
 	void Open()
