@@ -8,6 +8,7 @@ using System.Collections;
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using UnityEngine.SceneManagement;
 
 public class BeatManager : MonoBehaviour
 {
@@ -134,6 +135,11 @@ public class BeatManager : MonoBehaviour
         if (slider)
         {
             slider.value = currentBeatTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadSceneAsync(0);
         }
     }
 #if UNITY_EDITOR
