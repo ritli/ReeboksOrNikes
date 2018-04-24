@@ -24692,6 +24692,11 @@ Prefab:
       propertyPath: dialoge.sentences.Array.data[1]
       value: Doggy style!!
       objectReference: {fileID: 0}
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: isDave
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 394d404bc0fe0e048933c9163aafcc17, type: 2}
   m_IsPrefabParent: 0

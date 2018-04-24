@@ -315,6 +315,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4480604841958454, guid: 394d404bc0fe0e048933c9163aafcc17, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.094511986
@@ -351,6 +356,26 @@ Prefab:
         type: 2}
       propertyPath: dialoge.sentences.Array.data[0]
       value: Thanks for Playing our gamejam game!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: isDave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.data[2]
+      value: Barking up the wrong tree.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.data[0]
+      value: 'Wow this club is big, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136237184009494, guid: 394d404bc0fe0e048933c9163aafcc17,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.data[1]
+      value: I hope I'm not...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 394d404bc0fe0e048933c9163aafcc17, type: 2}

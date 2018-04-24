@@ -996,6 +996,11 @@ Prefab:
       value: "I've got a bone to pick with Cate, so I hope she's ready for someone
         that's more...\t"
       objectReference: {fileID: 0}
+    - target: {fileID: 114569277529154254, guid: 9e0006917ef9e0a4aab8abdac4d30d7f,
+        type: 2}
+      propertyPath: isDave
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e0006917ef9e0a4aab8abdac4d30d7f, type: 2}
   m_IsPrefabParent: 0
@@ -7489,6 +7494,16 @@ Prefab:
     - target: {fileID: 4027005485266486, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}
       propertyPath: m_RootOrder
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394091866156930, guid: d8d70ccdcf6f91344be56819d1ceee35,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.data[1]
+      value: Let's ruff him up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394091866156930, guid: d8d70ccdcf6f91344be56819d1ceee35,
+        type: 2}
+      propertyPath: dialoge.sentences.Array.data[0]
+      value: There's a DOG in the club!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8d70ccdcf6f91344be56819d1ceee35, type: 2}

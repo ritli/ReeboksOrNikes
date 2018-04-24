@@ -12,6 +12,8 @@ public class StoryHandler : MonoBehaviour {
     public bool triggeredByDoor = false;
     DoorLockObject doorParent;
 
+    public bool isDave = false;
+
     float clickDelay = 0.5f;
     float currentClickTime = 0;
 
@@ -37,6 +39,8 @@ public class StoryHandler : MonoBehaviour {
                     Debug.Log("Name   " + dialoge.name);
                     FindObjectOfType<DialogeManager>().startDialoge(dialoge);
                     Started = true;
+
+                    if (isDave)
                     FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
 
 
@@ -46,7 +50,8 @@ public class StoryHandler : MonoBehaviour {
                     //Debug.Log("CAlling");
                     int i = FindObjectOfType<DialogeManager>().DisplayNextDialoge();
 
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+                    if (isDave)
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
 
                     if (i == 0)
                     {
