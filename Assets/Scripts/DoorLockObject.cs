@@ -27,36 +27,36 @@ public class DoorLockObject : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && playerIsClose)
         {
-
             gameplayUI.active = true;
             if (gameplayUI.wins >= 3)
             {
+                dialog.GetComponent<StoryHandler>().triggeredByDoor = true;
                 dialog.GetComponent<StoryHandler>().startDialgoe = true;
                 gameplayUI.active = false;
                 MakeVisible(false);
                 levelClear = true;
 
-                /*if(dialog.GetComponent<StoryHandler>().ac == false)
-                {
-                    Debug.Log("Change shit");
-                }*/
             }
         }
+    }
+
+    public void EndLevel()
+    {
         if (levelClear)
         {
-           
-             if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
-             {
-				if (!finalLevel)
-				{
-					SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-				}
-				else
-				{
-					SceneManager.LoadSceneAsync(0);
-				}
+
+            if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
+            {
+                if (!finalLevel)
+                {
+                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                else
+                {
+                    SceneManager.LoadSceneAsync(0);
+                }
                 levelClear = false;
-             }
+            }
         }
     }
 

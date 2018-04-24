@@ -8,46 +8,64 @@ public class StoryHandler : MonoBehaviour {
     private bool Started = false;
     public bool startDialgoe = false;
     public bool done = false;
+    [HideInInspector]
+    public bool triggeredByDoor = false;
+    DoorLockObject doorParent;
+
+    float clickDelay = 0.5f;
+    float currentClickTime = 0;
 
     // Use this for initialization
     void Start()
     {
+        doorParent = FindObjectOfType<DoorLockObject>();
+
         //startDialgoe = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (startDialgoe)
         {
-            if (!Started)
+            currentClickTime += Time.deltaTime;
+
+            if (currentClickTime > clickDelay)
             {
-                Debug.Log("Name   " + dialoge.name);
-                FindObjectOfType<DialogeManager>().startDialoge(dialoge);
-                Started = true;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+                if (!Started)
+                {
+                    Debug.Log("Name   " + dialoge.name);
+                    FindObjectOfType<DialogeManager>().startDialoge(dialoge);
+                    Started = true;
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
 
 
+                }
+                else if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.E))
+                {
+                    //Debug.Log("CAlling");
+                    int i = FindObjectOfType<DialogeManager>().DisplayNextDialoge();
+
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+
+                    if (i == 0)
+                    {
+                        currentClickTime = 0;
+                        Invoke("kill", 0.5f);
+                    }
+                }
             }
-            else if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.E))
-            {
-                //Debug.Log("CAlling");
-                int i = FindObjectOfType<DialogeManager>().DisplayNextDialoge();
 
-                FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
 
-                if (i == 0)
-                 {
-                    kill();
-                 }
-            }
         }
     }
     public void kill()
     {
+        if (triggeredByDoor)
+        {
+            doorParent.EndLevel();
+        }
 
-        Debug.Log("Killing");
         gameObject.SetActive(false);
     }
 }
