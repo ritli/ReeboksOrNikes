@@ -6617,7 +6617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -895, y: 420}
+  m_AnchoredPosition: {x: -618, y: 446}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1566663797
@@ -7735,7 +7735,7 @@ GameObject:
   - component: {fileID: 1950635931}
   - component: {fileID: 1950635930}
   - component: {fileID: 1950635932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: not-cheating-at-all
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13273,12 +13273,12 @@ Prefab:
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 110.69
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 110.69
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}
