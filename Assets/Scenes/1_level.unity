@@ -16186,12 +16186,12 @@ Prefab:
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 110.69
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 110.69
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 224427915904986978, guid: 657c2b5eedc1a7445aef95cade7ed236,
         type: 2}

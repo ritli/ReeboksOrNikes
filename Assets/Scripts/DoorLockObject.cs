@@ -47,11 +47,11 @@ public class DoorLockObject : MonoBehaviour
            
              if (GameObject.FindObjectOfType<DialogeManager>().isActive == false)
              {
-				if (!finalLevel)
+				if (!finalLevel && Input.GetButtonDown("Fire1"))
 				{
 					SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 				}
-				else
+				else if (Input.GetButtonDown("Fire1"))
 				{
 					SceneManager.LoadSceneAsync(0);
 				}
@@ -66,6 +66,7 @@ public class DoorLockObject : MonoBehaviour
 		{
 			playerIsClose = true;
 			MakeVisible(true);
+			BeatManager.GetPlayer.movementDisabled = true;
 		}
 	}
 
