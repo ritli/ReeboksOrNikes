@@ -75,6 +75,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 10);
+
         if (chaserCount > 0)
         {
             if (chaserCountUpdated)
@@ -143,7 +145,7 @@ public class Player : MonoBehaviour
         {
             float time = BeatManager.GetCurrentBeatTime;
 
-            return (time > 0.7f || time < 0.3f);
+            return (time > 0.9f || time < 0.4f);
         }
     }
 

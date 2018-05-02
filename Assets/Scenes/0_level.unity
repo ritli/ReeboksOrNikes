@@ -1289,18 +1289,20 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1807999483}
-    - target: {fileID: 4465710370808774, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465710370808774, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556757746208266, guid: f9111b85e8afc0048b7492da6c0da553,
+    - target: {fileID: 114709025511897738, guid: f9111b85e8afc0048b7492da6c0da553,
         type: 2}
-      propertyPath: StopEvent
-      value: 2
+      propertyPath: beatImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709025511897738, guid: f9111b85e8afc0048b7492da6c0da553,
+        type: 2}
+      propertyPath: currentBpm
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709025511897738, guid: f9111b85e8afc0048b7492da6c0da553,
+        type: 2}
+      propertyPath: MusicEvent
+      value: event:/Loop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9111b85e8afc0048b7492da6c0da553, type: 2}
@@ -2012,8 +2014,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -3868,8 +3870,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -7071,8 +7073,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -7786,8 +7788,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16

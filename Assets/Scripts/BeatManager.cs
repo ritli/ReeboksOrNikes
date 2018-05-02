@@ -25,10 +25,11 @@ public class BeatManager : MonoBehaviour
     float currentBeatTime;
     int currentBeat = 0;
     float songDsp;
-
+    float songPos, songPosInBeats;
     public Slider slider;
     public Image sliderImage;
     public Player player;
+    public Image beatImage;
 
     public delegate void OnBeat(int count);
     public static event OnBeat onBeat;
@@ -94,10 +95,10 @@ public class BeatManager : MonoBehaviour
 
         emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.Event = MusicEvent;
+
         songDsp = (float)AudioSettings.dspTime;
         emitter.Play();
 
-        //.GetBus("AggressiveBass").setVolume(0);
         SetBPM(currentBpm);
 	}
 
@@ -110,32 +111,56 @@ public class BeatManager : MonoBehaviour
 
     void SetBPM(float bpm)
     {
-        beatTime = 60 / bpm;
+        beatTime = 60f / bpm;
         currentBpm = bpm;
     }
 
-    void FixedUpdate()
+
+    private void Update()
     {
-        currentBeatTime += Time.fixedDeltaTime / beatTime;
+        //calculate the position in seconds
+        songPos = (float)(AudioSettings.dspTime - songDsp);
 
-        if (currentBeatTime > 1)
+        //calculate the position in beats
+        songPosInBeats = songPos / beatTime;
+
+
+        currentBeatTime = songPosInBeats - Mathf.FloorToInt(songPosInBeats);
+
+        if (Mathf.FloorToInt(songPosInBeats) % 4 != currentBeat)
         {
-            currentBeatTime -= 1;
-            currentBeat++;
-
-            currentBeat = currentBeat % 4;
+            //currentBeatTime -= 1;
+            currentBeat = (currentBeat +1) % 4;
 
             if (onBeat != null)
             {
-                print(AudioSettings.dspTime);
                 onBeat(currentBeat);
+
+                /*
+                Color c = beatImage.color;
+                c.a = 1;
+                beatImage.color = c;
+                */
             }
         }
 
         if (slider)
         {
+            /*
+            Color c = beatImage.color;
+
+            c.a -= Time.deltaTime;
+            beatImage.color = c;
+            */
             slider.value = currentBeatTime;
         }
+
+    }
+
+    void FixedUpdate()
+    {
+       // currentBeatTime += Time.fixedDeltaTime / beatTime;
+
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

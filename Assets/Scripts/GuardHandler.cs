@@ -236,6 +236,8 @@ public class GuardHandler : MonoBehaviour {
     }
 
     void Update() {
+        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 10);
+
         PatrolUpdate();
         VisionUpdate();
 
@@ -262,14 +264,12 @@ public class GuardHandler : MonoBehaviour {
 
             alertMark.flipX = true;
             sprite.flipX = true;
-            //forwardVector = Vector2.right;
         }
         else
         {
             alertMark.flipX = false;
 
             sprite.flipX = false;
-            //forwardVector = Vector2.left;
         }
     }
 
