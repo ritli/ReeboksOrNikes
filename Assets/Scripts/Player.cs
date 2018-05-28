@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 10);
+        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 5) + 1000;
 
         if (chaserCount > 0)
         {

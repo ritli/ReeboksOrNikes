@@ -37,6 +37,8 @@ public class GuardHandler : MonoBehaviour {
 
     MeshRenderer coneMeshRenderer;
 
+    Vector3 spawnPoint;
+
     SpriteRenderer alertMark;
     float alertmarkOffset;
 
@@ -77,6 +79,18 @@ public class GuardHandler : MonoBehaviour {
         animator.SetFloat("SpeedMultiplier", BeatManager.GetCurrentBPM / 60);
 
         GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[0].transform;
+
+        spawnPoint = transform.position;
+
+        BeatManager.onRestart += Restart;
+    }
+
+    void Restart()
+    {
+        transform.position = spawnPoint;
+        GetComponent<Pathfinding.AIDestinationSetter>().target = patrolpoints.PatrolPoints[0].transform;
+        playerVisible = false;
+        playerDetected = false;
     }
 
     void PatrolUpdate()
@@ -173,14 +187,13 @@ public class GuardHandler : MonoBehaviour {
         timeInVisionCone = Mathf.Clamp(timeInVisionCone, 0, timeToDetect + 1);
 
         Vector2 dir = (BeatManager.GetPlayer.transform.position - transform.position).normalized * visionRange;
+        float distToPlayer = Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position);
 
         if (Vector2.Distance(BeatManager.GetPlayer.transform.position, transform.position) < visionRange && Mathf.Abs(Vector2.Angle(dir, forwardVector.normalized)) < visionAngle)
         {
-            if (!Physics2D.Raycast(transform.position + Vector3.up * 0.32f, dir, visionRange, obstacleMask))
+            if (!Physics2D.Raycast(transform.position + Vector3.up * 0.32f, dir, distToPlayer, obstacleMask))
             {
                 playerVisible = true;
-
-
             }
             else
             {
@@ -236,7 +249,7 @@ public class GuardHandler : MonoBehaviour {
     }
 
     void Update() {
-        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 10);
+        sprite.sortingOrder = -Mathf.FloorToInt(transform.position.y * 10) + 1000;
 
         PatrolUpdate();
         VisionUpdate();
@@ -285,6 +298,7 @@ public class GuardHandler : MonoBehaviour {
         float stepAngleSize = visionAngle / stepCount;
         List<Vector3> viewPoints = new List<Vector3>();
         ViewCastInfo oldViewCast = new ViewCastInfo();
+
         for (int i = 0; i <= stepCount; i++) {
 
             float angle = Mathf.Atan2(forwardVector.y, forwardVector.x) * Mathf.Rad2Deg - 90 + visionAngle + stepAngleSize * i * 2;
@@ -316,7 +330,7 @@ public class GuardHandler : MonoBehaviour {
         Vector3[] vertices = new Vector3[vertexCount];
         int[] triangles = new int[(vertexCount - 2) * 3];
 
-        vertices[0] = Vector3.zero;
+        vertices[0] = Vector3.zero + Vector3.up * 0.32f;
         for (int i = 0; i < vertexCount - 1; i++) {
             vertices[i + 1] = transform.InverseTransformPoint(viewPoints[i]);
 

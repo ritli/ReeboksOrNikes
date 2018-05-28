@@ -350,7 +350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4480604841958454, guid: 394d404bc0fe0e048933c9163aafcc17, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 114965920002743958, guid: 394d404bc0fe0e048933c9163aafcc17,
         type: 2}
@@ -751,7 +751,7 @@ Transform:
   - {fileID: 818095201}
   - {fileID: 371709742}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &100551039
 Prefab:
@@ -22719,7 +22719,7 @@ GameObject:
   - component: {fileID: 1155452122}
   - component: {fileID: 1155452121}
   m_Layer: 2
-  m_Name: GameObject (1)
+  m_Name: Music Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22915,7 +22915,7 @@ GameObject:
   - component: {fileID: 1177521272}
   - component: {fileID: 1177521271}
   m_Layer: 2
-  m_Name: GameObject (3)
+  m_Name: Music Trigger 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24611,7 +24611,7 @@ Transform:
   - {fileID: 687984544}
   - {fileID: 20403250}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1616614599
 Prefab:
@@ -25209,7 +25209,7 @@ Transform:
   - {fileID: 259947462}
   - {fileID: 793689838}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754931802
 GameObject:
@@ -27385,7 +27385,7 @@ GameObject:
   - component: {fileID: 1859488479}
   - component: {fileID: 1859488478}
   m_Layer: 2
-  m_Name: GameObject (2)
+  m_Name: Music Trigger 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27441,34 +27441,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1869658138
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1869658139}
-  m_Layer: 0
-  m_Name: AI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1869658139
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869658138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31877837, y: 0.749254, z: -9.765625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1870221256
 GameObject:
