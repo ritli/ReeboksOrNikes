@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114556532144942192}
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   EditorEvents:
   - {fileID: 114032596541354774}
   - {fileID: 114490525748200948}
@@ -23,9 +23,9 @@ MonoBehaviour:
   - {fileID: 114407120039862364}
   - {fileID: 114659221955276374}
   - {fileID: 114485529083191824}
-  MasterBankRef: {fileID: 114852830045098308}
+  MasterBankRef: {fileID: 114411772261017462}
   StringsBankRef: {fileID: 114556532144942192}
-  stringsBankWriteTime: 636608682700644248
+  stringsBankWriteTime: 636601345251739074
   cacheVersion: 2
 --- !u!114 &114008306545426016
 MonoBehaviour:
@@ -71,7 +71,7 @@ MonoBehaviour:
   Path: event:/JumpFail
   guid: 446a1ffebdfbc94580359917cf4b4b4a
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -274,13 +274,13 @@ MonoBehaviour:
   Path: event:/Loop
   guid: 915c0c82984e9e4996d73d1bbca4b684
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114728014123930256}
-  - {fileID: 114880278106545216}
+  - {fileID: 114839549130645140}
+  - {fileID: 114610505572385892}
   MinDistance: 0
   MaxDistance: 0
   Length: 96022
@@ -328,7 +328,7 @@ MonoBehaviour:
   Path: event:/AngryCat
   guid: e4e19b97b72eed43bab3d7c977fa7ec3
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -504,15 +504,34 @@ MonoBehaviour:
   Path: event:/Loop1
   guid: 7314acbca79bba429e3279220d215c12
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114274498404734612}
+  - {fileID: 114883709892994776}
   MinDistance: 0
   MaxDistance: 0
   Length: 64000
+--- !u!114 &114411772261017462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: G:\GitHub\Ludum Dare 41\ReeboksOrNikes\Assets\Audio\fmodproject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636601345251683935
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2714688
+  Exists: 1
 --- !u!114 &114440772114840156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +561,7 @@ MonoBehaviour:
   Path: event:/Menu
   guid: 28fe5f8b2178b545b64c1582bc76238e
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -564,7 +583,7 @@ MonoBehaviour:
   Path: event:/AggressiveBass
   guid: 591a0fb60a132c47a23baef3a2a2d08f
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -629,13 +648,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\fmodproject\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636608682700644248
+  lastModified: 636601345251739074
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1170
   Exists: 1
 --- !u!114 &114565781129014154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
+--- !u!114 &114610505572385892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -698,7 +732,7 @@ MonoBehaviour:
   Path: event:/Crunch
   guid: 4f7e03c43c14424fad3d4eb44762223f
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -909,6 +943,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114839549130645140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Chased
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114850816588312650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,7 +1051,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: d524586c3d5ada49936e751b4824cf61
   Banks:
-  - {fileID: 114852830045098308}
+  - {fileID: 114411772261017462}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1010,6 +1059,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 581
+--- !u!114 &114883709892994776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LoopStage
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114915246780534124
 MonoBehaviour:
   m_ObjectHideFlags: 0

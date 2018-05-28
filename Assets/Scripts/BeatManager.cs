@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 public class BeatManager : MonoBehaviour
 {
 
-    GameObject spawnPoint;
+    public GameObject spawnPoint;
 
     [FMODUnity.EventRef]
     public string MusicEvent;
