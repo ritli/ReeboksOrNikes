@@ -61,6 +61,7 @@ public class DoorLock : MonoBehaviour
 	void Open()
 	{
 		active = false;
+		gameObject.SetActive(false);
 	}
 
 	bool IsOnBeat
