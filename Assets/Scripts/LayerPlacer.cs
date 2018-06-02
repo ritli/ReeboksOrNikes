@@ -12,7 +12,7 @@ public class LayerPlacer : MonoBehaviour {
 
         for (int i = 0; i < renderers.Length; i++)
         {
-            renderers[i].sortingOrder = -Mathf.FloorToInt(renderers[i].transform.position.y * 10);
+            renderers[i].sortingOrder = -Mathf.FloorToInt(renderers[i].transform.position.y * 10) + 1000;
         }
 	}
 	

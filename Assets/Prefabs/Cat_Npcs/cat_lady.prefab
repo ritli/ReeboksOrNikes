@@ -77,6 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4804340917109656}
   - component: {fileID: 212548654949705534}
+  - component: {fileID: 114277265762253860}
   m_Layer: 0
   m_Name: speechBubble
   m_TagString: Untagged
@@ -249,6 +250,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114277265762253860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1744948111518076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444b15121d2defd4d96e7496a8e0723f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114622076109938358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -484,7 +496,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2000
   m_Sprite: {fileID: 21300000, guid: 46a338ce9c2eb954a89fc6385664f72a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

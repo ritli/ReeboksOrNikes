@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 public class BeatManager : MonoBehaviour
 {
 
-    GameObject spawnPoint;
+    public GameObject spawnPoint;
 
     [FMODUnity.EventRef]
     public string MusicEvent;
@@ -33,6 +33,8 @@ public class BeatManager : MonoBehaviour
 
     public delegate void OnBeat(int count);
     public static event OnBeat onBeat;
+    public delegate void OnRestart();
+    public static event OnRestart onRestart;
 
     public static BeatManager instance;
     
@@ -71,6 +73,9 @@ public class BeatManager : MonoBehaviour
     {
         GetPlayer.transform.position = instance.spawnPoint.transform.position;
 		GetPlayer.RespawnBones();
+
+        onRestart();
+
     }
 
     void Start()
