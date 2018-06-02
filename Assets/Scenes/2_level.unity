@@ -802,6 +802,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -871,8 +886,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -9
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -15875,6 +15890,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -15941,6 +15971,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -16148,6 +16193,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -16468,6 +16528,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -16597,11 +16672,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4688603245050820, guid: d0c19d35cf0d7bd4dbc349dc5da53a2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.6600001
+      value: 6.81
       objectReference: {fileID: 0}
     - target: {fileID: 4688603245050820, guid: d0c19d35cf0d7bd4dbc349dc5da53a2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.24
+      value: 3.79
       objectReference: {fileID: 0}
     - target: {fileID: 4688603245050820, guid: d0c19d35cf0d7bd4dbc349dc5da53a2b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16755,6 +16830,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -16985,6 +17075,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -17119,6 +17224,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -17275,6 +17395,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -17344,8 +17479,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -20004,6 +20139,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -20169,6 +20319,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -20348,6 +20513,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -20625,6 +20805,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -20759,6 +20954,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -20975,8 +21185,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -21709,6 +21919,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -21775,6 +22000,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -21919,6 +22159,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -22537,6 +22792,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -22671,6 +22941,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -23090,6 +23375,21 @@ Prefab:
       value: 
       objectReference: {fileID: 21300002, guid: 2518a53ab2deb2642977cc5fc5179ab9,
         type: 3}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -23287,6 +23587,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -23413,6 +23728,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -23617,6 +23947,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -23673,6 +24018,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -24060,6 +24420,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -24126,6 +24501,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -24253,6 +24643,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -24485,6 +24890,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -24569,6 +24989,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -24661,6 +25096,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -24853,6 +25303,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -24914,6 +25379,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -25286,8 +25766,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -6
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -27639,6 +28119,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -27700,6 +28195,21 @@ Prefab:
         type: 2}
       propertyPath: startMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -27859,6 +28369,21 @@ Prefab:
       propertyPath: m_Name
       value: Danger tile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -27989,6 +28514,21 @@ Prefab:
       propertyPath: startMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
   m_IsPrefabParent: 0
@@ -28073,6 +28613,21 @@ Prefab:
     - target: {fileID: 1829894660251860, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
       propertyPath: m_Name
       value: Danger tile (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1019011643
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212179373421184480, guid: ffdf06a0cc837b840acd9c8041aa5674,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdf06a0cc837b840acd9c8041aa5674, type: 2}
@@ -28357,8 +28912,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1019011643
+  m_SortingLayer: -1
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16

@@ -24,24 +24,41 @@ public class DoorLock : MonoBehaviour
 		{
 			Spin();
 
-			if (Input.GetButtonDown("Fire1") && IsOnBeat && (transform.eulerAngles.z < 30f || transform.eulerAngles.z > 330f))
+			if (Input.GetButtonDown("Fire1"))
+            {
+                 if (IsOnBeat && (transform.eulerAngles.z < 30f || transform.eulerAngles.z > 330f)){
+
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Click");
+
+                    if (transform.eulerAngles.z < 5 || transform.eulerAngles.z > 355)
+                    {
+                        wins += 2;
+                        Win();
+                    }
+                    else
+                    {
+                        wins++;
+                        Win();
+                    }
+                }
+
+                 else
+                    {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Fail");
+                    }
+            }
 			{
-				if (transform.eulerAngles.z < 5 || transform.eulerAngles.z > 355)
-				{
-					wins += 2;
-					Win();
-				}
-				else
-				{
-					wins++;
-					Win();
-				}
+
 			}
+
+
 		}
 		
-		if (wins >= 3)
+		if (wins >= 3 && active)
 		{
-			Open();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/JumpFail");
+
+            Open();
 		}
 	}
 

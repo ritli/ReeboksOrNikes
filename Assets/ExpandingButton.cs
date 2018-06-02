@@ -13,15 +13,25 @@ public class ExpandingButton : MonoBehaviour, IPointerClickHandler, IPointerEnte
 
     float time = 0, alpha;
 
+    public Sprite chapterSprite;
+    public string sceneName = "Chapter";
+    public int sceneIndexToLoad = 1;
     TMPro.TextMeshProUGUI text;
+    Image chapterImage;
 
-    public void Click()
-    {
-    }
+    Vector2 localOffset;
 
     public void OnPointerClick(PointerEventData eventData)
     {
         expand = true;
+
+        localOffset = transform.localPosition;
+
+        print(localOffset);
+
+
+        transform.parent = transform.parent.parent;
+        //transform.parent = FindObjectOfType<ChapterHandler>().transform;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -34,46 +44,60 @@ public class ExpandingButton : MonoBehaviour, IPointerClickHandler, IPointerEnte
         hover = false;
     }
 
-    // Use this for initialization
     void Start () {
         text = GetComponentInChildren<TMPro.TextMeshProUGUI>();
+        text.text = sceneName;
         rect = GetComponent<RectTransform>();
+        chapterImage = transform.GetChild(0).GetChild(0).GetComponent<Image>();
+
+        localOffset = transform.localPosition;
     }
-	
-	// Update is called once per frame
-	void Update () {
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+
+        transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = chapterSprite;
+    }
+#endif
+    void Update () {
 
         if (hover && !expand)
         {
-            text.transform.localPosition = Vector3.Lerp(text.transform.localPosition, Vector2.down * 150, Time.deltaTime * 5);
+            text.transform.localPosition = Vector3.Lerp(text.transform.localPosition, Vector2.down * 105, Time.deltaTime * 5);
 
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
             alpha = Mathf.Clamp01(alpha + Time.deltaTime * 2);
 
+            chapterImage.color = Color.Lerp(chapterImage.color, Color.white, Time.deltaTime * 5);
+
         }
         else
         {
-            text.transform.localPosition = Vector3.Lerp(text.transform.localPosition, Vector2.down * 95, Time.deltaTime * 5);
+            text.transform.localPosition = Vector3.Lerp(text.transform.localPosition, Vector2.down * 95, Time.deltaTime * 10);
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
-            alpha = Mathf.Clamp01(alpha - Time.deltaTime * 2);
+            alpha = Mathf.Clamp01(alpha - Time.deltaTime * 4);
 
+            if (expand)
+            {
+                chapterImage.color = Color.Lerp(chapterImage.color, Color.white, Time.deltaTime * 10);
+            }
+
+            else
+            {
+                chapterImage.color = Color.Lerp(chapterImage.color, Color.white * 0.4f, Time.deltaTime * 5);
+            }
         }
-
-
 
         if (expand)
         {
-            time += Time.deltaTime;
             
-            //rect.rect.Set(rect.rect.x, rect.rect.y, from.x, from.y);
-
             if (time > 0.5)
             {
                 Vector2 from = rect.rect.size;
 
                 from = Vector2.Lerp(from, new Vector2(Screen.width, Screen.height), Time.deltaTime * 6);
 
-                transform.position = Vector3.Lerp(transform.position, new Vector3(Screen.width / 2, Screen.height / 2), 1);
+                transform.localPosition = Vector3.Lerp(transform.localPosition, Vector2.zero, 1f);
 
                 rect.ForceUpdateRectTransforms();
 
@@ -82,14 +106,16 @@ public class ExpandingButton : MonoBehaviour, IPointerClickHandler, IPointerEnte
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, new Vector3(Screen.width / 2, Screen.height / 2), time / 0.5f);
+                transform.localPosition = Vector3.Lerp(transform.localPosition, Vector2.zero, time / 0.5f);
             }
 
 
-            if (time > 2)
+            if (time > 1.2)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(sceneIndexToLoad);
             }
+
+            time += Time.deltaTime;
         }
 
     }

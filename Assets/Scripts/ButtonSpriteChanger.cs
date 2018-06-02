@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ButtonSpriteChanger : MonoBehaviour {
+public class ButtonSpriteChanger : MonoBehaviour, IPointerClickHandler{
 
     public Sprite noHower;
     public Sprite Hower;
 
+    float hoverPlayTime;
+
     Image image;
+
+    public bool holdSprite = false;
+    public bool toggled;
 
     // Use this for initialization
     void Start () {
@@ -16,16 +22,28 @@ public class ButtonSpriteChanger : MonoBehaviour {
         gameObject.GetComponent<Image>().sprite = noHower;
 
     }
-	
+
+
     public void howerButton()
     {
-        Debug.Log("hower");
+
         gameObject.GetComponent<Image>().sprite = Hower;
     }
 
     public void noHowerButton()
     {
-        Debug.Log("no hower");
-        gameObject.GetComponent<Image>().sprite = noHower;
+
+
+        if (!toggled || !holdSprite)
+        {
+            gameObject.GetComponent<Image>().sprite = noHower;
+        }
+
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (holdSprite)
+        toggled = !toggled;
     }
 }
